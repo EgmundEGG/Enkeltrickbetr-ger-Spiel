@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://byahlyysvua57"]
+
+[ext_resource type="Script" uid="uid://crvsd7uyqch82" path="res://chat.gd" id="1_adtv2"]
+
+[node name="Handy" type="Control" unique_id=264381244]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Chat" type="Control" parent="." unique_id=1049416561]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_adtv2")
+
+[node name="Background" type="ColorRect" parent="Chat" unique_id=509775755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Chat/Background" unique_id=529218457]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="ColorRect" parent="Chat/Background/VBoxContainer" unique_id=1450536675]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+color = Color(0.16924527, 0.1692453, 0.16924521, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Chat/Background/VBoxContainer/Header" unique_id=1804681034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Avatar" type="Label" parent="Chat/Background/VBoxContainer/Header/HBoxContainer" unique_id=1595374801]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Avatar"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="Chat/Background/VBoxContainer/Header/HBoxContainer" unique_id=953940522]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Name"
+horizontal_alignment = 1
+
+[node name="Status" type="Label" parent="Chat/Background/VBoxContainer/Header/HBoxContainer" unique_id=2014270431]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "ONLINE/OFFLINE"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Chat/Background/VBoxContainer" unique_id=121775342]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MessageContainer" type="VBoxContainer" parent="Chat/Background/VBoxContainer/ScrollContainer" unique_id=561512335]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Footer" type="ColorRect" parent="Chat/Background/VBoxContainer" unique_id=1714421206]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+color = Color(0.22561458, 0.3556425, 0.2347852, 1)
+
+[node name="Buttonbox" type="HBoxContainer" parent="Chat/Background/VBoxContainer/Footer" unique_id=2089376885]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Chat/Background/VBoxContainer/Footer/Buttonbox" unique_id=105714962]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="Chat/Background/VBoxContainer/Footer/Buttonbox" unique_id=1825283412]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="Chat/Background/VBoxContainer/Footer/Buttonbox" unique_id=2146179705]
+layout_mode = 2
