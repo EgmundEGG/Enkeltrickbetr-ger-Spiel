@@ -28,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.14044744, 0.14044744, 0.14044744, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Chat/Background" unique_id=529218457]
 layout_mode = 1
@@ -40,7 +41,7 @@ grow_vertical = 2
 [node name="Header" type="ColorRect" parent="Chat/Background/VBoxContainer" unique_id=1450536675]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-color = Color(0.16924527, 0.1692453, 0.16924521, 1)
+color = Color(0.36282963, 0.36282942, 0.36282945, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Chat/Background/VBoxContainer/Header" unique_id=1804681034]
 layout_mode = 1
@@ -80,7 +81,7 @@ size_flags_horizontal = 3
 [node name="Footer" type="ColorRect" parent="Chat/Background/VBoxContainer" unique_id=1714421206]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-color = Color(0.22561458, 0.3556425, 0.2347852, 1)
+color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 
 [node name="Buttonbox" type="HBoxContainer" parent="Chat/Background/VBoxContainer/Footer" unique_id=2089376885]
 layout_mode = 1

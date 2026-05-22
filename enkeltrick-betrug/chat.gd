@@ -53,23 +53,43 @@ func addBubble(text, is_user:bool) -> void:
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	
 	var panel = PanelContainer.new()
+	var stylebox = StyleBoxFlat.new()
 	var label = Label.new()
 	#desing
 	label.text = text
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD #zeilenumbruch
 	label.add_theme_color_override("font_color", Color(0.0, 0.0, 0.0, 1.0))
 	label.custom_minimum_size = Vector2(150, 0)  #  Mindestbreite
-
-	panel.add_child(label)
+	
+	#ecken abrunden
+	stylebox.corner_radius_bottom_left = 10
+	stylebox.corner_radius_bottom_right = 10
+	stylebox.corner_radius_top_left = 10
+	stylebox.corner_radius_top_right = 10
+	
+	#schrift ist nicht so angeklatscht an den ecken!
+	stylebox.content_margin_bottom = 10
+	stylebox.content_margin_right = 14
+	stylebox.content_margin_top = 10
+	stylebox.content_margin_left = 14
+	messagecontainer.add_theme_constant_override("separation", 8)
+	
 	#links/rechts
 	if is_user== true:
-		#panel.modulate = Color.GREEN
+		stylebox.bg_color = Color.BURLYWOOD
+		#panel.modulate = Color.RED
 		align_box.add_child(spacer)
 		align_box.add_child(panel)
-		panel.modulate = Color.RED
+		
 	else:
+		stylebox.bg_color = Color.GAINSBORO
 		align_box.add_child(panel)
 		align_box.add_child(spacer)
+	
+	#überschreibt die Farbe vom panel für bessere farbe
+	panel.add_theme_stylebox_override("panel", stylebox)
+	panel.add_child(label)
+	
 	#spawn
 	messagecontainer.add_child(align_box)
 	pass
@@ -125,6 +145,7 @@ func _on_button3_pressed() -> void:
 func lvlLoad(path:String) -> void:
 	current_level = load(path).new()
 	dialog = current_level.dialog
+	
 	
 	# Chat resetten (wichtig!)
 	for child in messagecontainer.get_children():
