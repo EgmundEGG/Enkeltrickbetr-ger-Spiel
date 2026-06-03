@@ -1,24 +1,73 @@
 [gd_scene format=3 uid="uid://byahlyysvua57"]
 
 [ext_resource type="Script" uid="uid://crvsd7uyqch82" path="res://chat.gd" id="1_adtv2"]
+[ext_resource type="Texture2D" uid="uid://bf3wm35tkqn0e" path="res://image/Lvl hintergrund.png" id="2_lf3ts"]
+[ext_resource type="Script" uid="uid://byrtcbu5wo2km" path="res://lv_l_button.gd" id="3_i3lhd"]
+[ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="4_btpht"]
 
-[node name="Handy" type="Control" unique_id=264381244]
+[node name="Game" type="Control" unique_id=264381244]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 3
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Chat" type="Control" parent="." unique_id=1049416561]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="LvlHintergrund" type="Sprite2D" parent="." unique_id=122819531]
+position = Vector2(580.62506, 323)
+scale = Vector2(1.2328879, 0.8864569)
+texture = ExtResource("2_lf3ts")
+
+[node name="Paiper" type="Control" parent="." unique_id=325893066]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Paiper" unique_id=298362556]
+layout_mode = 0
+offset_left = 687.0
+offset_top = 311.0
+offset_right = 859.0
+offset_bottom = 607.0
+
+[node name="Überschrift" type="TextEdit" parent="Paiper" unique_id=22708777]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 323.0
+offset_right = 829.0
+offset_bottom = 360.0
+text = "Wichtiger Text"
+
+[node name="TextEdit" type="TextEdit" parent="Paiper" unique_id=279680532]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 366.0
+offset_right = 854.0
+offset_bottom = 594.0
+text = "Wichtige Dinge
+
+alkdalkdndnk
+awkdnjawädi
+adoiadi
+aoihndwaiijbhna
+adoiahdo
+aoidj"
+
+[node name="Chat" type="Control" parent="." unique_id=1049416561]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -499.0
+offset_top = 245.0
+offset_right = -99.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_adtv2")
 
 [node name="Background" type="ColorRect" parent="Chat" unique_id=509775755]
@@ -83,20 +132,120 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 
-[node name="Buttonbox" type="HBoxContainer" parent="Chat/Background/VBoxContainer/Footer" unique_id=2089376885]
+[node name="Buttonbox" type="VBoxContainer" parent="Chat/Background/VBoxContainer/Footer" unique_id=1373199254]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 
 [node name="Button" type="Button" parent="Chat/Background/VBoxContainer/Footer/Buttonbox" unique_id=105714962]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Button2" type="Button" parent="Chat/Background/VBoxContainer/Footer/Buttonbox" unique_id=1825283412]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Button3" type="Button" parent="Chat/Background/VBoxContainer/Footer/Buttonbox" unique_id=2146179705]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LvLButton" type="Control" parent="." unique_id=1116624081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="LvLButton" unique_id=417609308]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(0, 0.827451, 0.8862745, 0.5019608)
+action_mode = 0
+text = "LVL"
+script = ExtResource("3_i3lhd")
+
+[node name="LVLAuswahl" type="Control" parent="." unique_id=710270965]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_btpht")
+
+[node name="ColorRect" type="ColorRect" parent="LVLAuswahl" unique_id=1041814951]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1113.0
+offset_bottom = 604.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="LVLAuswahl" unique_id=835186091]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 6.0
+offset_right = 1044.0
+offset_bottom = 82.0
+text = "LVL Auswahl"
+editable = false
+
+[node name="Button" type="Button" parent="LVLAuswahl" unique_id=1923458663]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 193.0
+offset_right = 216.0
+offset_bottom = 296.0
+text = "LVL 1"
+
+[node name="Button2" type="Button" parent="LVLAuswahl" unique_id=883536380]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 193.0
+offset_right = 397.0
+offset_bottom = 296.0
+text = "LVL 2"
+
+[node name="Button3" type="Button" parent="LVLAuswahl" unique_id=580341785]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 192.0
+offset_right = 577.0
+offset_bottom = 295.0
+text = "LVL 3
+"
+
+[node name="Exit" type="Button" parent="LVLAuswahl" unique_id=111748795]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 6.0
+offset_right = 1147.0
+offset_bottom = 82.0
+text = "X
+"
+
+[connection signal="pressed" from="LvLButton/Button" to="Chat" method="_on_button_pressed"]

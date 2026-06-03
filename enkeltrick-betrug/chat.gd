@@ -27,6 +27,7 @@ func _ready() -> void:
 	button1.pressed.connect(_on_button1_pressed)
 	button2.pressed.connect(_on_button2_pressed)
 	button3.pressed.connect(_on_button3_pressed)
+	
 	pass 
 
 
