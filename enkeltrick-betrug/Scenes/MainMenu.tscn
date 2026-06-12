@@ -59,6 +59,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Direktnachrichten"
 horizontal_alignment = 1
@@ -87,10 +89,28 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "E-Mails"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="WIP" type="TextureRect" parent="TopRight" unique_id=346943795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 126.5
+offset_top = 84.0
+offset_right = -138.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.2658164
+texture = ExtResource("2_853f1")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="BottomLeft" type="Button" parent="." unique_id=1415713375]
 layout_mode = 1
@@ -121,6 +141,22 @@ text = "Telefon"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="WIP" type="TextureRect" parent="BottomLeft" unique_id=1526847988]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 83.0
+offset_right = -40.723053
+offset_bottom = -8.238281
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.2658164
+texture = ExtResource("2_853f1")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="BottomMiddle" type="Button" parent="." unique_id=1788711253]
 layout_mode = 1
 anchors_preset = -1
@@ -146,9 +182,28 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 0.33398438
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "noch irgendwas"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="WIP" type="TextureRect" parent="BottomMiddle" unique_id=579382064]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.666962
+offset_top = 83.0
+offset_right = -46.05609
+offset_bottom = -8.238281
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.2658164
+texture = ExtResource("2_853f1")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="BottomRight" type="Button" parent="." unique_id=904974452]
 layout_mode = 1
@@ -174,25 +229,22 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Einstellungen"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="WiPicon" type="Sprite2D" parent="." unique_id=841142655]
-position = Vector2(199.00003, 507.00003)
-rotation = -0.2684523
-scale = Vector2(0.24969855, 0.24969853)
-texture = ExtResource("2_853f1")
-
-[node name="WiPicon2" type="Sprite2D" parent="." unique_id=1726144916]
-position = Vector2(869, 239)
-rotation = -0.2684523
-scale = Vector2(0.24969855, 0.24969853)
-texture = ExtResource("2_853f1")
-
-[node name="WiPicon3" type="Sprite2D" parent="." unique_id=14905976]
-position = Vector2(578, 507.00003)
-rotation = -0.2684523
-scale = Vector2(0.24969855, 0.24969853)
-texture = ExtResource("2_853f1")
+[node name="Credits" type="Button" parent="." unique_id=1029023818]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.16000001
+offset_left = 35.0
+offset_top = 19.0
+offset_right = -1048.0
+offset_bottom = -15.680008
+text = "Credits"
+script = ExtResource("1_tt5f1")
+SceneName = "Credits"
