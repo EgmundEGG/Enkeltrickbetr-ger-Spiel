@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4owf0cu5p2fy"]
 
 [ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://cdks6d51wqouh" path="res://MainMenu/Design/messages.png" id="2_8saeu"]
 [ext_resource type="Texture2D" uid="uid://cji01boiwdh2k" path="res://MainMenu/Design/WIPicon.png" id="2_853f1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
@@ -28,13 +29,38 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.89, 0.89, 0.89, 1)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1672001294]
+[node name="Topbar" type="ColorRect" parent="." unique_id=1672001294]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 104.0
 grow_horizontal = 2
 color = Color(0.25065494, 0.49176848, 0.87110835, 1)
+
+[node name="Credits" type="Button" parent="Topbar" unique_id=1029023818]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 19.0
+offset_right = -1048.0
+offset_bottom = -16.0
+text = "Credits"
+script = ExtResource("1_tt5f1")
+SceneName = "Credits"
+
+[node name="Title" type="Label" parent="Topbar" unique_id=2126240918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 372.0
+offset_right = -372.0
+theme_override_font_sizes/font_size = 25
+text = "Die Enkeltrickbetrüger"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TopLeft" type="Button" parent="." unique_id=970217607]
 layout_mode = 1
@@ -65,6 +91,20 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Direktnachrichten"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="MessageIcon" type="TextureRect" parent="TopLeft" unique_id=1105660392]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 19.0
+offset_right = 0.5
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8saeu")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="TopRight" type="Button" parent="." unique_id=507183231]
 layout_mode = 1
@@ -235,16 +275,3 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Einstellungen"
 horizontal_alignment = 1
 vertical_alignment = 2
-
-[node name="Credits" type="Button" parent="." unique_id=1029023818]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.16000001
-offset_left = 35.0
-offset_top = 19.0
-offset_right = -1048.0
-offset_bottom = -15.680008
-text = "Credits"
-script = ExtResource("1_tt5f1")
-SceneName = "Credits"
