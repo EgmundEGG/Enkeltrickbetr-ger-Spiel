@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4owf0cu5p2fy"]
 
 [ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://cji01boiwdh2k" path="res://MainMenu/Design/WIPicon.png" id="2_853f1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -177,3 +178,21 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Einstellungen"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="WiPicon" type="Sprite2D" parent="." unique_id=841142655]
+position = Vector2(199.00003, 507.00003)
+rotation = -0.2684523
+scale = Vector2(0.24969855, 0.24969853)
+texture = ExtResource("2_853f1")
+
+[node name="WiPicon2" type="Sprite2D" parent="." unique_id=1726144916]
+position = Vector2(869, 239)
+rotation = -0.2684523
+scale = Vector2(0.24969855, 0.24969853)
+texture = ExtResource("2_853f1")
+
+[node name="WiPicon3" type="Sprite2D" parent="." unique_id=14905976]
+position = Vector2(578, 507.00003)
+rotation = -0.2684523
+scale = Vector2(0.24969855, 0.24969853)
+texture = ExtResource("2_853f1")
