@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="1_tt5f1"]
 [ext_resource type="Texture2D" uid="uid://cdks6d51wqouh" path="res://MainMenu/Design/messages.png" id="2_8saeu"]
 [ext_resource type="Texture2D" uid="uid://cji01boiwdh2k" path="res://MainMenu/Design/WIPicon.png" id="2_853f1"]
+[ext_resource type="Texture2D" uid="uid://bdhd1c5wsb53o" path="res://MainMenu/Design/settings.png" id="4_ghw46"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -57,6 +58,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 372.0
 offset_right = -372.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Die Enkeltrickbetrüger"
 horizontal_alignment = 1
@@ -275,3 +278,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Einstellungen"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="SettingsIcon" type="TextureRect" parent="BottomRight" unique_id=794603512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 35.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ghw46")
+expand_mode = 1
+stretch_mode = 5
