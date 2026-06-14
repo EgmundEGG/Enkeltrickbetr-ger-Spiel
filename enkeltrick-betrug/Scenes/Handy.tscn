@@ -3,24 +3,6 @@
 [ext_resource type="Script" uid="uid://crvsd7uyqch82" path="res://chat.gd" id="1_adtv2"]
 [ext_resource type="Texture2D" uid="uid://bf3wm35tkqn0e" path="res://image/Lvl hintergrund.png" id="2_lf3ts"]
 [ext_resource type="Script" uid="uid://byrtcbu5wo2km" path="res://lv_l_button.gd" id="3_i3lhd"]
-[ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="4_btpht"]
-[ext_resource type="Texture2D" uid="uid://djkox5221jpk2" path="res://image/tutorial.svg" id="5_2a1j6"]
-[ext_resource type="Texture2D" uid="uid://bt0j5cmtp7557" path="res://image/messenger_green.svg" id="6_f664e"]
-[ext_resource type="Texture2D" uid="uid://br13najnpejus" path="res://image/messenger_grey.svg" id="7_juqjk"]
-[ext_resource type="Texture2D" uid="uid://c4m4hcsmb41su" path="res://image/messenger_yellow.svg" id="8_srqa7"]
-[ext_resource type="Texture2D" uid="uid://tqlhhxplexeg" path="res://image/messenger_red.svg" id="9_ke3ps"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyyne"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrt62"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpgbr"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4yc5"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdgh2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q23g"]
 [ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="5_kjkul"]
 
 [node name="Game" type="Control" unique_id=264381244]
@@ -190,315 +172,44 @@ grow_vertical = 2
 [node name="Button" type="Button" parent="LvLButton" unique_id=417609308]
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.4740001
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = 422.0
+offset_top = -199.0
+offset_right = 520.04
+offset_bottom = -138.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_disabled_color = Color(0, 0.827451, 0.8862745, 0.5019608)
 action_mode = 0
-text = "LVL"
-script = ExtResource("3_i3lhd")
-
-[node name="LVLAuswahl" type="Control" parent="." unique_id=710270965]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("4_btpht")
-
-[node name="ColorRect" type="ColorRect" parent="LVLAuswahl" unique_id=1041814951]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 5.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.9019608, 0.9019608, 0.9019608, 1)
-
-[node name="Header" type="ColorRect" parent="LVLAuswahl" unique_id=208845050]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_right = 5.0
-offset_bottom = 100.0
-grow_horizontal = 2
-color = Color(0.24705882, 0.49411765, 0.85882354, 1)
-
-[node name="Title" type="Label" parent="LVLAuswahl/Header" unique_id=277011108]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 28
 text = "Levelauswahl"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BackButton" type="Button" parent="LVLAuswahl/Header" unique_id=111748795]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 1
-offset_left = 51.0
-offset_top = 13.0
-offset_right = 135.0
-offset_bottom = 89.0
-theme_override_colors/font_color = Color(1.0039686, 1.0039686, 1.0039686, 1)
-theme_override_colors/icon_normal_color = Color(0.15294118, 0.2901961, 0.47843137, 1)
-text = "Zurück
-"
-
-[node name="Content" type="MarginContainer" parent="LVLAuswahl" unique_id=1735538800]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = 130.0
-offset_right = -50.0
-offset_bottom = -30.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="LVLAuswahl/Content" unique_id=1536428995]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="TutorialButton" type="Button" parent="LVLAuswahl/Content/VBoxContainer" unique_id=1779395475]
-custom_minimum_size = Vector2(0, 225)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_normal_color = Color(0.8117647, 0.8117647, 0.8117647, 1)
-theme_override_colors/icon_pressed_color = Color(0.72156864, 0.72156864, 0.72156864, 1)
-theme_override_colors/icon_hover_color = Color(0.85490197, 0.85490197, 0.85490197, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_gyyne")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mrt62")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wpgbr")
-
-[node name="CenterContainer" type="CenterContainer" parent="LVLAuswahl/Content/VBoxContainer/TutorialButton" unique_id=865404731]
-layout_mode = 0
-offset_right = 1052.0
-offset_bottom = 225.0
-size_flags_horizontal = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="LVLAuswahl/Content/VBoxContainer/TutorialButton/CenterContainer" unique_id=1478589201]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/TutorialButton/CenterContainer/HBoxContainer" unique_id=1895265620]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("5_2a1j6")
-
-[node name="Space" type="Control" parent="LVLAuswahl/Content/VBoxContainer/TutorialButton/CenterContainer/HBoxContainer" unique_id=836652031]
-custom_minimum_size = Vector2(15, 0)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="LVLAuswahl/Content/VBoxContainer/TutorialButton/CenterContainer/HBoxContainer" unique_id=1764442686]
-layout_mode = 2
-theme_override_font_sizes/font_size = 28
-text = "Tutorial"
-
-[node name="GridContainer" type="GridContainer" parent="LVLAuswahl/Content/VBoxContainer" unique_id=1420781482]
-layout_mode = 2
-theme_override_constants/h_separation = 30
-theme_override_constants/v_separation = 30
-columns = 3
-
-[node name="Level1Button" type="Button" parent="LVLAuswahl/Content/VBoxContainer/GridContainer" unique_id=708458478]
-custom_minimum_size = Vector2(330, 225)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_normal_color = Color(0.8117647, 0.8117647, 0.8117647, 1)
-theme_override_colors/icon_pressed_color = Color(0.72156864, 0.72156864, 0.72156864, 1)
-theme_override_colors/icon_hover_color = Color(0.85490197, 0.85490197, 0.85490197, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_l4yc5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_sdgh2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7q23g")
-text = "
-
-"
-icon_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button" unique_id=191492075]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpacerTop" type="Control" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button/VBoxContainer" unique_id=1604169666]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="CenterContainer" type="CenterContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button/VBoxContainer" unique_id=1724547955]
-layout_mode = 2
-
-[node name="DifficultyIcons" type="HBoxContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button/VBoxContainer/CenterContainer" unique_id=863358041]
-layout_mode = 2
-
-[node name="Diff1" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1366206750]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("6_f664e")
-
-[node name="Diff2" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=666680028]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("7_juqjk")
-
-[node name="Diff3" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1069177426]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("7_juqjk")
-
-[node name="LevelName" type="Label" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button/VBoxContainer" unique_id=1924322518]
-custom_minimum_size = Vector2(0, 80)
-layout_mode = 2
-theme_override_font_sizes/font_size = 28
-text = "Level 1"
-horizontal_alignment = 1
-
-[node name="Level2Button" type="Button" parent="LVLAuswahl/Content/VBoxContainer/GridContainer" unique_id=2028530861]
-custom_minimum_size = Vector2(330, 225)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_normal_color = Color(0.8117647, 0.8117647, 0.8117647, 1)
-theme_override_colors/icon_pressed_color = Color(0.72156864, 0.72156864, 0.72156864, 1)
-theme_override_colors/icon_hover_color = Color(0.85490197, 0.85490197, 0.85490197, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_l4yc5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_sdgh2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7q23g")
-text = "
-
-"
-icon_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button" unique_id=2028703340]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpacerTop" type="Control" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer" unique_id=1518892409]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="CenterContainer" type="CenterContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer" unique_id=1488346150]
-layout_mode = 2
-
-[node name="DifficultyIcons" type="HBoxContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer/CenterContainer" unique_id=391029946]
-layout_mode = 2
-
-[node name="Diff1" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1892966995]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("8_srqa7")
-
-[node name="Diff2" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1572338301]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("8_srqa7")
-
-[node name="Diff3" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1284621244]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("7_juqjk")
-
-[node name="LevelName" type="Label" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer" unique_id=1430365609]
-custom_minimum_size = Vector2(0, 80)
-layout_mode = 2
-theme_override_font_sizes/font_size = 28
-text = "Level 2"
-horizontal_alignment = 1
-
-[node name="Level3Button" type="Button" parent="LVLAuswahl/Content/VBoxContainer/GridContainer" unique_id=1602101228]
-custom_minimum_size = Vector2(330, 225)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_normal_color = Color(0.8117647, 0.8117647, 0.8117647, 1)
-theme_override_colors/icon_pressed_color = Color(0.72156864, 0.72156864, 0.72156864, 1)
-theme_override_colors/icon_hover_color = Color(0.85490197, 0.85490197, 0.85490197, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_l4yc5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_sdgh2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7q23g")
-text = "
-
-"
-icon_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button" unique_id=1823993938]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpacerTop" type="Control" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer" unique_id=1566908022]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="CenterContainer" type="CenterContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer" unique_id=120279461]
-layout_mode = 2
-
-[node name="DifficultyIcons" type="HBoxContainer" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer/CenterContainer" unique_id=1442610630]
-layout_mode = 2
-
-[node name="Diff1" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=545303202]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("9_ke3ps")
-
-[node name="Diff2" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1966187337]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("9_ke3ps")
-
-[node name="Diff3" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1617986644]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("9_ke3ps")
-
-[node name="LevelName" type="Label" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer" unique_id=1488083211]
-custom_minimum_size = Vector2(0, 80)
-layout_mode = 2
-theme_override_font_sizes/font_size = 28
-text = "Level 3"
-horizontal_alignment = 1
+script = ExtResource("3_i3lhd")
 
 [node name="Button" type="Button" parent="." unique_id=1155998799]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -153.0
+offset_left = -155.0
 offset_top = 16.0
-offset_right = -15.0
+offset_right = -17.0
 offset_bottom = 99.0
+grow_horizontal = 2
+text = "Hauptmenü"
+script = ExtResource("5_kjkul")
+SceneName = "MainMenu"
+
+[node name="Button2" type="Button" parent="." unique_id=630182065]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -155.0
+offset_top = 17.0
+offset_right = -17.0
+offset_bottom = 100.0
 grow_horizontal = 2
 text = "Hauptmenü"
 script = ExtResource("5_kjkul")
