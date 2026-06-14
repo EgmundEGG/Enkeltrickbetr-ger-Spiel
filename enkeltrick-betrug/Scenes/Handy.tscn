@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bf3wm35tkqn0e" path="res://image/Lvl hintergrund.png" id="2_lf3ts"]
 [ext_resource type="Script" uid="uid://byrtcbu5wo2km" path="res://lv_l_button.gd" id="3_i3lhd"]
 [ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="4_btpht"]
+[ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="5_kjkul"]
 
 [node name="Game" type="Control" unique_id=264381244]
 custom_minimum_size = Vector2(400, 0)
@@ -247,5 +248,19 @@ offset_right = 1147.0
 offset_bottom = 82.0
 text = "X
 "
+
+[node name="Button" type="Button" parent="." unique_id=1155998799]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -153.0
+offset_top = 16.0
+offset_right = -15.0
+offset_bottom = 99.0
+grow_horizontal = 2
+text = "Hauptmenü"
+script = ExtResource("5_kjkul")
+SceneName = "MainMenu"
 
 [connection signal="pressed" from="LvLButton/Button" to="Chat" method="_on_button_pressed"]
