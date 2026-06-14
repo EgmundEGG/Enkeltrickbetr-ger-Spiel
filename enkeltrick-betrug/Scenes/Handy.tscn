@@ -21,6 +21,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdgh2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q23g"]
+[ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="5_kjkul"]
 
 [node name="Game" type="Control" unique_id=264381244]
 custom_minimum_size = Vector2(400, 0)
@@ -488,5 +489,19 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "Level 3"
 horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1155998799]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -153.0
+offset_top = 16.0
+offset_right = -15.0
+offset_bottom = 99.0
+grow_horizontal = 2
+text = "Hauptmenü"
+script = ExtResource("5_kjkul")
+SceneName = "MainMenu"
 
 [connection signal="pressed" from="LvLButton/Button" to="Chat" method="_on_button_pressed"]
