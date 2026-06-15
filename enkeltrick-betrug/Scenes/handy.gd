@@ -4,9 +4,9 @@ extends Node
 @onready var lvl_auswahl = $LVLAuswahl
 @onready var agent_unten = $AgentUnten
 @onready var agent_oben = $AgentOben
-@onready var paiper = $Paiper
 @onready var lvl_button = $LvLButton
 @onready var main_button = $Main_Button
+@onready var infoText = $Infotext
 
 var bereit_unten = false
 var bereit_oben = false
@@ -28,7 +28,7 @@ func starte_level_mit_tutorial(level_pfad: String):
 	lvl_auswahl.hide()
 	chat.hide()
 	lvl_button.hide()
-	paiper.hide()
+	infoText.hide()
 	main_button.hide()
 	
 	var level_daten = load(level_pfad).new()
@@ -48,7 +48,7 @@ func checke_start():
 	if bereit_unten and bereit_oben:
 		
 		chat.show()
-		paiper.show()
+		infoText.show()
 		lvl_button.show()
 		main_button.show()
 		
