@@ -34,7 +34,7 @@ offset_right = 1154.392
 offset_bottom = 648.0
 rotation = 3.1415927
 
-[node name="PostIt" type="TextureRect" parent="Infotext" unique_id=258569220]
+[node name="PostIt1" type="TextureRect" parent="Infotext" unique_id=258569220]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -46,7 +46,7 @@ offset_bottom = -122.99988
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
-[node name="Title" type="Label" parent="Infotext/PostIt" unique_id=522273262]
+[node name="Title" type="Label" parent="Infotext/PostIt1" unique_id=522273262]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -59,7 +59,7 @@ horizontal_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
 
-[node name="Content" type="Label" parent="Infotext/PostIt" unique_id=1675530974]
+[node name="Content" type="Label" parent="Infotext/PostIt1" unique_id=1675530974]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -134,7 +134,7 @@ anchor_bottom = 1.0
 offset_left = -2.861023e-05
 offset_bottom = -127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Thema 3"
+text = "Links"
 horizontal_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
@@ -148,7 +148,7 @@ offset_left = 3.000002
 offset_top = 23.0
 offset_right = -2.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Text 3"
+text = "Klicke nicht auf jeden Link, den Du siehst. Manchmal sehen diese nach einem genaueren Blick nicht ganz richtig aus."
 vertical_alignment = 1
 autowrap_mode = 3
 clip_text = true
@@ -174,7 +174,7 @@ anchor_bottom = 1.0
 offset_left = -2.861023e-05
 offset_bottom = -127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Thema 4"
+text = "Familienmitglied ?"
 horizontal_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
@@ -188,7 +188,7 @@ offset_left = 3.000002
 offset_top = 23.0
 offset_right = -2.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Text 4"
+text = "Vielleicht kannst Du eventuelle neue Telefonnummern von einem anderen Familienmitglied bestätigen lassen."
 vertical_alignment = 1
 autowrap_mode = 3
 clip_text = true
