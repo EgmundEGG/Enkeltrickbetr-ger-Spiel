@@ -1,7 +1,7 @@
 extends Control
 
 @onready var back_button: Button = $Header/BackButton
-@onready var next: Button = $Header/	Header/NextButton
+@onready var next: Button = $Header/NextButton
 @onready var tutorial: Button = $Content/VBoxContainer/TutorialButton
 @onready var lvl1: Button = $Content/VBoxContainer/GridContainer/Level1Button
 @onready var lvl2: Button = $Content/VBoxContainer/GridContainer/Level2Button
