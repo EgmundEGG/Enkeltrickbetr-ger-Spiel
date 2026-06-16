@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bemjjo0lwwlhi"]
+
+[ext_resource type="Script" uid="uid://cwtrq8ufoa0dv" path="res://assets/audio/button_title_animate.gd" id="3_osvgy"]
+[ext_resource type="Script" uid="uid://blcrho40677o" path="res://assets/audio/volume_slider_master.gd" id="4_0crpi"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=766532736]
+offset_left = 494.0
+offset_top = 192.0
+offset_right = 658.0
+offset_bottom = 455.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="." unique_id=137633378]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="Control" unique_id=578511593]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 30.0
+grow_vertical = 0
+text = "✖"
+icon_alignment = 1
+script = ExtResource("3_osvgy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1925309046]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1445273088]
+layout_mode = 2
+
+[node name="Sound" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1354635203]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 40
+text = "Sound"
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer" unique_id=1060505272]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Master" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1064216833]
+layout_mode = 2
+text = "Master"
+
+[node name="Master_Slider" type="HSlider" parent="VBoxContainer/VBoxContainer" unique_id=463724133]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_0crpi")
+bus_name = "Master"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer" unique_id=555848649]
+layout_mode = 2
+
+[node name="Music" type="Label" parent="VBoxContainer/VBoxContainer2" unique_id=1271962636]
+layout_mode = 2
+text = "Musik"
+
+[node name="Music_Slider" type="HSlider" parent="VBoxContainer/VBoxContainer2" unique_id=381331826]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_0crpi")
+bus_name = "Music"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer" unique_id=1465617679]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="VBoxContainer/VBoxContainer3" unique_id=1808164514]
+layout_mode = 2
+text = "Sound Effekte"
+
+[node name="Sound_Effect_Silder" type="HSlider" parent="VBoxContainer/VBoxContainer3" unique_id=2100562526]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_0crpi")
+bus_name = "Sound Effect"
