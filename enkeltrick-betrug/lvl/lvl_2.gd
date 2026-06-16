@@ -1,6 +1,16 @@
 extends Resource
 
+var agenten_text_unten: Array[String] = [
+	"Ein neuer Tag, eine neue Benachrichtigung. Ihr Smartphone leuchtet auf.",
+	"Der DHL-Paketservice meldet sich bei Ihnen. Angeblich hängt ein Paket von Ihnen beim Zoll fest und kann nicht zugestellt werden.",
+	"Erwarten Sie überhaupt ein Paket? Schauen Sie sich die Forderungen genau an, bevor Sie voreilig handeln."
+]
 
+var agenten_text_oben: Array[String] = [
+	"Die Szene wechselt. Wir haben es hier mit einer angeblichen Paket-Zustellung zu tun.",
+	"Betrüger nutzen oft das DHL-Logo, um Vertrauen zu wecken. Achten Sie gleich auf zwei Dinge:",
+	"Gibt es einen verdächtigen Link? Und wird mit künstlichem Zeitdruck gearbeitet, um eine kleine Gebühr zu erpressen? Beraten Sie Ihren Mitspieler!"
+]
 
 var dialog = {
 

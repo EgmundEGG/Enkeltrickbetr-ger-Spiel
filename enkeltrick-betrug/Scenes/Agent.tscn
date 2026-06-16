@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cahggf1nf718"]
+
+[ext_resource type="Script" uid="uid://b1catkcpsgvv2" path="res://Scenes/agent.gd" id="1_xhs4t"]
+[ext_resource type="Texture2D" uid="uid://df77lnbqj53jp" path="res://image/agent.png" id="2_morgh"]
+
+[node name="Agent" type="Control" unique_id=1273825380]
+custom_minimum_size = Vector2(200, 650)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -650.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_xhs4t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1613576036]
+layout_mode = 1
+offset_top = 322.0
+offset_right = 1157.0
+offset_bottom = 647.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.49411765)
+
+[node name="AgentBild" type="TextureRect" parent="." unique_id=1336633762]
+layout_mode = 1
+offset_left = -76.0
+offset_top = 405.0
+offset_right = 323.0487
+offset_bottom = 629.0
+texture = ExtResource("2_morgh")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=4274349]
+layout_mode = 1
+offset_left = 280.0
+offset_top = 419.0
+offset_right = 1018.0
+offset_bottom = 563.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 30
+
+[node name="NextButton" type="Button" parent="." unique_id=1134096788]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.5
+offset_top = -91.0
+offset_right = 45.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SkipButton" type="Button" parent="." unique_id=943845378]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 349.0
+offset_right = 179.0
+offset_bottom = 396.0
+text = "Überspringe ..."
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
