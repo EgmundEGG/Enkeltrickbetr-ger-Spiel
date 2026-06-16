@@ -4,6 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://bf3wm35tkqn0e" path="res://image/Lvl hintergrund.png" id="2_lf3ts"]
 [ext_resource type="Script" uid="uid://byrtcbu5wo2km" path="res://lv_l_button.gd" id="3_i3lhd"]
 [ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="4_btpht"]
+[ext_resource type="PackedScene" uid="uid://bemjjo0lwwlhi" path="res://assets/audio/settings.tscn" id="5_pwgpe"]
+[ext_resource type="AudioStream" uid="uid://w1berqlnkbcm" path="res://assets/audio/atlasaudio-comedy-518068.mp3" id="6_ole5j"]
+[ext_resource type="AudioStream" uid="uid://c68kdfam2ojua" path="res://assets/audio/Knopfgeräusch.mp3" id="7_srqa7"]
+[ext_resource type="AudioStream" uid="uid://duh842hfj5327" path="res://assets/audio/Klickgeräusch_Red_Button.mp3" id="8_ke3ps"]
+[ext_resource type="AudioStream" uid="uid://cutpi6f08bi4x" path="res://assets/audio/Erfolgssound.mp3" id="9_gyyne"]
+[ext_resource type="AudioStream" uid="uid://b7va085fv71hi" path="res://assets/audio/Fehlersound.mp3" id="10_mrt62"]
+[ext_resource type="AudioStream" uid="uid://dl1k4ei1ew4kl" path="res://assets/audio/Plopsound.mp3" id="11_wpgbr"]
+[ext_resource type="AudioStream" uid="uid://b8jliy2sp12bw" path="res://assets/audio/Klickgeräusch_Navigation.mp3" id="12_l4yc5"]
 
 [node name="Game" type="Control" unique_id=264381244]
 custom_minimum_size = Vector2(400, 0)
@@ -247,5 +255,36 @@ offset_right = 1147.0
 offset_bottom = 82.0
 text = "X
 "
+
+[node name="Settings" parent="." unique_id=312785776 instance=ExtResource("5_pwgpe")]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 41.0
+offset_right = 1073.0
+offset_bottom = 302.0
+
+[node name="Background" type="AudioStreamPlayer" parent="." unique_id=328148400]
+stream = ExtResource("6_ole5j")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="Spiel start" type="AudioStreamPlayer" parent="." unique_id=2014482468]
+stream = ExtResource("7_srqa7")
+
+[node name="Roter Knopf wird getrückt" type="AudioStreamPlayer" parent="." unique_id=1687967420]
+stream = ExtResource("8_ke3ps")
+
+[node name="LVL Geschafft" type="AudioStreamPlayer" parent="." unique_id=2129293564]
+stream = ExtResource("9_gyyne")
+
+[node name="LVL Gescheitert" type="AudioStreamPlayer" parent="." unique_id=557455802]
+stream = ExtResource("10_mrt62")
+
+[node name="Nachicht" type="AudioStreamPlayer" parent="." unique_id=413807021]
+stream = ExtResource("11_wpgbr")
+
+[node name="Navigationsknöpfe" type="AudioStreamPlayer" parent="." unique_id=1036465816]
+stream = ExtResource("12_l4yc5")
 
 [connection signal="pressed" from="LvLButton/Button" to="Chat" method="_on_button_pressed"]
