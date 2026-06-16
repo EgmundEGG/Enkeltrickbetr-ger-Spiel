@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu0oaehqx7vy7"
-path="res://.godot/imported/arrow_white.svg-4216ad92ba6246b2fc1afe6c8bfd6c31.ctex"
+uid="uid://e2gjdxh3l2at"
+path="res://.godot/imported/PostIt.png-b02f40db448c2f2e4bf8d9e4d8514b2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image/arrow_white.svg"
-dest_files=["res://.godot/imported/arrow_white.svg-4216ad92ba6246b2fc1afe6c8bfd6c31.ctex"]
+source_file="res://image/PostIt.png"
+dest_files=["res://.godot/imported/PostIt.png-b02f40db448c2f2e4bf8d9e4d8514b2c.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

@@ -1,5 +1,16 @@
 extends Resource
 
+var agenten_text_unten: Array[String] = [
+	"Sie checken gerade Ihre E-Mails. Eine neue Nachricht im Posteingang wartet auf Sie.",
+	"Jemand schreibt Sie wegen eines Termins von gestern an und bittet um Unterlagen. Die Person hat jedoch vergessen, ihren Namen zu nennen.",
+	"Handelt es sich um einen Betrugsversuch oder nur um einen unorganisierten Kollegen? Finden Sie es durch clevere Nachfragen heraus."
+]
+
+var agenten_text_oben: Array[String] = [
+	"Achtung, Berater-Team! Ein kleiner Twist für diesen Fall.",
+	"Nicht jede unklare Nachricht ist sofort ein Betrug. Manchmal tippen Leute einfach zu schnell und vergessen, sich richtig vorzustellen.",
+	"Helfen Sie dem Spieler am Handy dabei, durch geschickte Rückfragen die Identität des Absenders zu klären, ohne einen echten Kontakt vor den Kopf zu stoßen."
+]
 
 var dialog = {
 

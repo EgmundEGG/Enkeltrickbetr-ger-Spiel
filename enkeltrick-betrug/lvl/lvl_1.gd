@@ -1,5 +1,16 @@
 extends Resource
 
+var agenten_text_unten: Array[String] = [
+	"Es ist ein ruhiger Nachmittag. Sie sitzen gemütlich bei einer Tasse Kaffee, als plötzlich Ihr Handy vibriert.",
+	"Eine Nachricht von einer unbekannten Nummer taucht auf dem Display auf. Jemand behauptet, Ihr Enkel zu sein.",
+	"Lesen Sie die Nachrichten laut vor und entscheiden Sie gemeinsam mit Ihren Beratern, wie Sie reagieren."
+]
+
+var agenten_text_oben: Array[String] = [
+	"Ein neuer Fall startet. Der Spieler am Handy wird gleich von einer völlig fremden Nummer kontaktiert.",
+	"Die Geschichte beginnt mit einem angeblich kaputten Handy und einer neuen Nummer. Ein klassischer Einstieg.",
+	"Hören Sie gut zu. Sobald von einer dringenden Überweisung oder einem Notfall die Rede ist, müssen Sie sofort Alarm schlagen!"
+]
 
 var dialog = {
 
