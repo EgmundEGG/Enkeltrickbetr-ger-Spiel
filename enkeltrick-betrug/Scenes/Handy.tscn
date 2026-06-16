@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://byrtcbu5wo2km" path="res://lv_l_button.gd" id="3_i3lhd"]
 [ext_resource type="Texture2D" uid="uid://e2gjdxh3l2at" path="res://image/PostIt.png" id="3_r48s6"]
 [ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="4_btpht"]
-[ext_resource type="PackedScene" uid="uid://bemjjo0lwwlhi" path="res://assets/audio/settings.tscn" id="5_pwgpe"]
+[ext_resource type="PackedScene" uid="uid://bemjjo0lwwlhi" path="res://Scenes/settings.tscn" id="5_pwgpe"]
 [ext_resource type="AudioStream" uid="uid://w1berqlnkbcm" path="res://assets/audio/atlasaudio-comedy-518068.mp3" id="6_ole5j"]
 [ext_resource type="AudioStream" uid="uid://c68kdfam2ojua" path="res://assets/audio/Knopfgeräusch.mp3" id="7_srqa7"]
 [ext_resource type="AudioStream" uid="uid://duh842hfj5327" path="res://assets/audio/Klickgeräusch_Red_Button.mp3" id="8_ke3ps"]
@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://dl1k4ei1ew4kl" path="res://assets/audio/Plopsound.mp3" id="11_wpgbr"]
 [ext_resource type="AudioStream" uid="uid://b8jliy2sp12bw" path="res://assets/audio/Klickgeräusch_Navigation.mp3" id="12_l4yc5"]
 [ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="5_kjkul"]
-[ext_resource type="PackedScene" path="res://Scenes/Agent.tscn" id="7_r48s6"]
+[ext_resource type="PackedScene" uid="uid://cahggf1nf718" path="res://Scenes/Agent.tscn" id="7_r48s6"]
 
 [node name="Game" type="Control" unique_id=264381244]
 custom_minimum_size = Vector2(400, 0)
