@@ -23,7 +23,7 @@ var dialog = {}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setData(avatar,names,status)
-	lvlLoad(GameState.selected_level)
+	lvlLoad("res://lvl/lvl_1.gd")
 	button1.pressed.connect(_on_button1_pressed)
 	button2.pressed.connect(_on_button2_pressed)
 	button3.pressed.connect(_on_button3_pressed)

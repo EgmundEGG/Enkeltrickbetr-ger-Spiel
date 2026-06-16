@@ -11,7 +11,7 @@ bg_color = Color(0.8, 0.8, 0.8, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i26rj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiy7p"]
-bg_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
+bg_color = Color(0.7, 0.7, 0.7, 1)
 
 [node name="MainMenu" type="Control" unique_id=933322017]
 layout_mode = 3
@@ -80,7 +80,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i26rj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_eiy7p")
 icon_alignment = 1
 script = ExtResource("1_tt5f1")
-SceneName = "MessengerLevelSelect"
+SceneName = "Handy"
 
 [node name="Label" type="Label" parent="TopLeft" unique_id=1877138731]
 layout_mode = 1
