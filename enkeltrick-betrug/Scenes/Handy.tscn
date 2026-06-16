@@ -312,36 +312,30 @@ grow_vertical = 2
 [node name="Button" type="Button" parent="LvLButton" unique_id=417609308]
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.4740001
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = -111.0
+offset_top = -78.0
+offset_right = -12.960003
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_disabled_color = Color(0, 0.827451, 0.8862745, 0.5019608)
 action_mode = 0
-text = "LVL"
+text = "Levelauswahl"
 script = ExtResource("3_i3lhd")
 
-[node name="LVLAuswahl" type="Control" parent="." unique_id=710270965]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_btpht")
-
-[node name="ColorRect" type="ColorRect" parent="LVLAuswahl" unique_id=1041814951]
+[node name="Button" type="Button" parent="." unique_id=1155998799]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1113.0
-offset_bottom = 604.0
+offset_left = -155.0
+offset_top = 16.0
+offset_right = -17.0
+offset_bottom = 99.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -397,14 +391,19 @@ text = "X
 "
 
 [node name="Main_Button" type="Button" parent="." unique_id=1155998799]
+text = "Hauptmenü"
+script = ExtResource("5_kjkul")
+SceneName = "MainMenu"
+
+[node name="Button2" type="Button" parent="." unique_id=630182065]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -153.0
-offset_top = 16.0
-offset_right = -15.0
-offset_bottom = 99.0
+offset_left = -155.0
+offset_top = 17.0
+offset_right = -17.0
+offset_bottom = 100.0
 grow_horizontal = 2
 text = "Hauptmenü"
 script = ExtResource("5_kjkul")
