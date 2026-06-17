@@ -1,5 +1,18 @@
 extends Resource
 
+var agenten_text_unten: Array[String] = [
+	"Achtung, ein neues Szenario auf Ihrem Smartphone!",
+	"Wieder meldet sich jemand mit einer neuen Nummer und gibt sich als Ihr Enkel aus. Das Handy wurde angeblich gestohlen.",
+	"Ist das wieder ein Betrugsversuch oder diesmal wirklich Ihr Enkel?",
+	"Gehen Sie ins Gespräch, stellen Sie clevere Fragen und entscheiden Sie gemeinsam mit Ihren Beratern."
+]
+
+var agenten_text_oben: Array[String] = [
+	"Hallo Berater! Vorsicht, dieser Fall hat einen Twist.",
+	"Nicht jede neue Nummer ist automatisch ein Betrug. Ein echtes Familienmitglied würde es verstehen, wenn man misstrauisch ist.",
+	"Prüfen Sie den Chat: Geht der Absender auf Nachfragen ein? Bietet er von sich aus an, dass man seine Eltern anrufen soll?",
+	"Helfen Sie dem Hauptspieler, echte Kontaktversuche von Betrug zu unterscheiden, ohne grundlos Kontakte zu blockieren!"
+]
 
 var dialog = {
 	

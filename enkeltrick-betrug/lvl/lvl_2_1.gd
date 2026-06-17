@@ -1,5 +1,17 @@
 extends Resource
 
+var agenten_text_unten: Array[String] = [
+	"Ein neuer Fall! Sie erhalten eine dringende Nachricht von einem Paketdienst.",
+	"Angeblich fehlen Adressdaten für eine Zustellung und Sie müssen sofort handeln.",
+	"Bevor Sie auf irgendwelche Links tippen, lesen Sie die Nachricht laut vor und schauen Sie, was Ihr Berater-Team dazu sagt."
+]
+
+var agenten_text_oben: Array[String] = [
+	"Berater-Team, Ihr Einsatz! Hier haben wir es mit einem klassischen Paket-Phishing-Versuch zu tun.",
+	"Achten Sie auf die roten Flaggen: Fehlt der konkrete Name des Paketdienstes? Wird starker Zeitdruck aufgebaut (z.B. 'nur noch 12 Stunden')?",
+	"Und ganz wichtig: Ist der Link in der Nachricht verdächtig?",
+	"Warnen Sie den Hauptspieler unbedingt davor, auf der verlinkten Seite persönliche Daten oder Kreditkarteninfos einzugeben!"
+]
 
 var dialog = {
 

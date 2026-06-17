@@ -1,5 +1,17 @@
 extends Resource
 
+var agenten_text_unten: Array[String] = [
+	"Ein neuer Fall wartet auf Sie! Sie erhalten eine E-Mail von einem angeblichen Kontakt.",
+	"Die Person behauptet, mit Ihnen auf einem Workshop gewesen zu sein, und schickt einen Link für die Unterlagen.",
+	"Waren Sie wirklich auf diesem Workshop? Lesen Sie die E-Mail laut vor und prüfen Sie gemeinsam, ob Sie den Link öffnen sollten."
+]
+
+var agenten_text_oben: Array[String] = [
+	"Aufgepasst, Berater-Team! Dieser Fall sieht nach Social Engineering aus.",
+	"Betrüger nutzen oft vage Informationen (z. B. 'dritte Reihe am Fenster'), um künstliches Vertrauen aufzubauen.",
+	"Achten Sie darauf: Baut der Absender Zeitdruck auf, damit ein unbekannter Link angeklickt wird?",
+	"Hören Sie genau zu und warnen Sie den Spieler am Handy, bevor er unüberlegt auf den Link drückt!"
+]
 
 var dialog = {
 
