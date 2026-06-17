@@ -84,6 +84,10 @@ var dialog = {
 "win": {
 	"text": "✅ BETRUG ERKANNT\n\nSehr gut!\nDu hast typische Warnzeichen erkannt:\n- Zeitdruck\n- kleine Gebühr\n- unbekannter Link\n- künstliche Dringlichkeit\n\nDu bist sicher geblieben.",
 	"options": []
+},
+"lucky": {
+	"text": "⚠️ GLÜCK GEHABT\n\nDu hast den Vorgang noch rechtzeitig abgebrochen!\nDas Geld ist sicher, aber das Anklicken des Links war extrem riskant. So können Betrüger Schadsoftware auf dein Smartphone laden.",
+	"options": []
 }
 }
 

@@ -23,7 +23,7 @@ func _ready():
 	chat.level_beendet.connect(_on_level_beendet)
 	
 func _on_level_beendet(ergebnis_id: String):
-	await get_tree().create_timer(3.0).timeout # spiegelt den Delay wieder bis der Agent quatscht
+	await get_tree().create_timer(8.0).timeout # spiegelt den Delay wieder bis der Agent quatscht
 	phase = "outro"
 	chat.hide()
 	infoText.hide()

@@ -64,7 +64,7 @@ var dialog = {
 	"options": [
 		{"text": "Das ist viel Geld...", "next": "druck2"},
 		{"text": "Ich überweise sofort.", "next": "lose"},
-		{"text": "Ich prüfe das erst.", "next": "win"}
+		{"text": "Ich prüfe das erst.", "next": "lucky"}
 	]
 },
 
@@ -81,7 +81,7 @@ var dialog = {
 	"text": "Bitte Oma es ist dringend!! Ich bekomme sonst große Probleme 😭",
 	"options": [
 		{"text": "Okay ich zahle.", "next": "lose"},
-		{"text": "Das klingt nach Betrug.", "next": "win"},
+		{"text": "Das klingt nach Betrug.", "next": "lucky"},
 		{"text": "Ich komme vorbei.", "next": "enttarnt"}
 	]
 },
@@ -90,7 +90,7 @@ var dialog = {
 	"text": "Danke dir ❤️ ich schicke dir gleich die Kontodaten",
 	"options": [
 		{"text": "Alles klar.", "next": "lose"},
-		{"text": "Moment mal...", "next": "enttarnt"},
+		{"text": "Moment mal...", "next": "lucky"},
 		{"text": "Ich überprüfe das.", "next": "win"}
 	]
 },
@@ -129,6 +129,10 @@ var dialog = {
 
 "win": {
 	"text": "✅ Gut gemacht! Du hast den Betrug erkannt.",
+	"options": []
+},
+"lucky": {
+	"text": "⚠️ GLÜCK GEHABT!\n\nDu hast die Überweisung im allerletzten Moment noch abgebrochen! Das war ein Betrüger. Du hast ihm anfangs viel zu schnell vertraut, aber zum Glück dein Geld behalten.",
 	"options": []
 }
 }
