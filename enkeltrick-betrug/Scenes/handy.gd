@@ -1,7 +1,6 @@
 extends Node
 
 @onready var chat = $Chat
-@onready var lvl_auswahl = $LVLAuswahl
 @onready var agent_unten = $AgentUnten
 @onready var agent_oben = $AgentOben
 @onready var lvl_button = $LvLButton
@@ -18,20 +17,20 @@ func _ready():
 	
 	agent_unten.tutorial_finished.connect(_on_agent_unten_fertig)
 	agent_oben.tutorial_finished.connect(_on_agent_oben_fertig)
+	
+	starte_level_mit_tutorial()
 
-func starte_level_mit_tutorial(level_pfad: String):
-	aktuelles_level = level_pfad
+func starte_level_mit_tutorial():
 	bereit_unten = false
 	bereit_oben = false
 	
 	# Kram ausblenden
-	lvl_auswahl.hide()
 	chat.hide()
 	lvl_button.hide()
 	infoText.hide()
 	main_button.hide()
 	
-	var level_daten = load(level_pfad).new()
+	var level_daten = load(GameState.selected_level).new()
 	
 	agent_unten.start_dialogue(level_daten.agenten_text_unten)
 	agent_oben.start_dialogue(level_daten.agenten_text_oben)
@@ -52,4 +51,4 @@ func checke_start():
 		lvl_button.show()
 		main_button.show()
 		
-		chat.lvlLoad(aktuelles_level)
+		chat.lvlLoad(GameState.selected_level)
