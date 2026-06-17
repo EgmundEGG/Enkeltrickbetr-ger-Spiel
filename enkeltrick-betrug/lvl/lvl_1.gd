@@ -1,5 +1,5 @@
 extends Resource
-
+#Agent-Story Intro
 var agenten_text_unten: Array[String] = [
 	"Es ist ein ruhiger Nachmittag. Sie sitzen gemütlich bei einer Tasse Kaffee, als plötzlich Ihr Handy vibriert.",
 	"Eine Nachricht von einer unbekannten Nummer taucht auf dem Display auf. Jemand behauptet, Ihr Enkel zu sein.",
@@ -131,4 +131,37 @@ var dialog = {
 	"text": "✅ Gut gemacht! Du hast den Betrug erkannt.",
 	"options": []
 }
+}
+
+#Agent-Auswertung
+var auswertung_unten = {
+	"win": [
+		"Hervorragend! Sie haben den Betrug rechtzeitig erkannt.",
+		"Sie haben kritisch nachgefragt und keine Überweisung getätigt. Genau so schützt man sich!"
+	],
+	"lucky": [ # wie bei lvl_0
+		"Glück gehabt! Es war diesmal tatsächlich Ihr echter Enkel.",
+		"Aber Sie haben die neue Nummer einfach akzeptiert, ohne sie z.B. bei den Eltern zu überprüfen.",
+		"Genau diese Gutgläubigkeit nutzen Enkeltrick-Betrüger gnadenlos aus. Seien Sie beim nächsten Mal kritischer!"
+	],
+	"lose": [
+		"Das Spiel ist vorbei. Leider haben Sie das Geld überwiesen.",
+		"Der Betrüger hat Zeitdruck aufgebaut ('Ich bekomme sonst große Probleme') und Sie manipuliert.",
+		"Merken Sie sich: Bei Geldforderungen über Messenger immer erst persönlich anrufen!"
+	]
+}
+
+var auswertung_oben = {
+	"win": [
+		"Klasse Beratung! Ihr Team hat die richtigen Schlüsse gezogen.",
+		"Sie haben rechtzeitig erkannt, dass die angebliche Notsituation nur erfunden war."
+	],
+	"lucky": [ # wie bei lvl_0
+		"Das war etwas leichtsinnig beraten!",
+		"Die Gruppe hat die neue Nummer blind akzeptiert, ohne kritische Nachfragen zu stellen. Das hätte auch ein Betrüger sein können."
+	],
+	"lose": [
+		"Der Betrug war erfolgreich. Das Geld ist weg.",
+		"Beim nächsten Mal müssen Sie den Spieler am Handy lauter und früher warnen, wenn plötzlich von Geld die Rede ist!"
+	]
 }

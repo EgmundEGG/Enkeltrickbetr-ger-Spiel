@@ -63,7 +63,7 @@ var dialog = {
 	"text": "🌐 Verifizierungsseite:\nBitte geben Sie zur Bestätigung ein:\n- Name\n- Adresse\n- Telefonnummer\n- Bankdaten (für 2,99€ Zollgebühr)",
 	"options": [
 		{"text": "Daten eingeben", "next": "lose"},
-		{"text": "Abbrechen", "next": "win"}
+		{"text": "Abbrechen", "next": "lucky"}
 	]
 },
 
@@ -85,5 +85,36 @@ var dialog = {
 	"text": "✅ BETRUG ERKANNT\n\nSehr gut!\nDu hast typische Warnzeichen erkannt:\n- Zeitdruck\n- kleine Gebühr\n- unbekannter Link\n- künstliche Dringlichkeit\n\nDu bist sicher geblieben.",
 	"options": []
 }
+}
 
+var auswertung_unten = {
+	"win": [
+		"Sehr gut! Sie sind auf den falschen Paketdienst nicht hereingefallen.",
+		"Kleine Gebühren und hoher Zeitdruck sind absolute Warnsignale. Sie haben Ihre Daten erfolgreich beschützt!"
+	],
+	"lucky": [ # dasselbe wie vorher bei lvl_0
+		"Puh, das war knapp!",
+		"Sie haben die Datenabfrage im letzten Moment abgebrochen und kein Geld verloren. Aber Vorsicht:",
+		"Allein das Anklicken von Links aus solchen SMS kann gefährliche Viren auf Ihr Smartphone laden!"
+	],
+	"lose": [
+		"Leider war das ein Betrug. Sie haben Ihre Zahlungsdaten an Betrüger gegeben.",
+		"Der angebliche Paketdienst hat Sie mit künstlichem Zeitdruck in die Falle gelockt.",
+		"Geben Sie niemals Bankdaten über Links in solchen SMS oder Mails ein!"
+	]
+}
+
+var auswertung_oben = {
+	"win": [
+		"Exzellente Arbeit vom Berater-Team! Sie haben den Phishing-Versuch schnell enttarnt.",
+		"Der gefälschte Link und der künstliche Druck wurden von Ihnen richtig als Betrug gedeutet."
+	],
+	"lucky": [ # dasselbe wie vorher in lvl_0
+		"Da haben Sie nochmal Glück gehabt!",
+		"Ihr Mitspieler am Handy hat den gefährlichen Link angeklickt. Da hätten Sie als Berater lauter und früher warnen müssen!"
+	],
+	"lose": [
+		"Die Daten wurden gestohlen. Der Phishing-Angriff war leider erfolgreich.",
+		"Sie müssen beim nächsten Mal sofort eingreifen, wenn das Handy nach Kreditkartendaten oder Passwörtern fragt!"
+	]
 }

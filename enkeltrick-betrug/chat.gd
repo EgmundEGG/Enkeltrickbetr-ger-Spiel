@@ -1,5 +1,7 @@
 extends Control
 
+signal level_beendet(end_knoten) #für Agent-Auswertung
+
 var avatar = "*BiLD*"
 var names = "SOHN"
 var status = true 
@@ -106,6 +108,7 @@ func showStep(key:String) ->void:
 		button2.hide()
 		button3.hide()
 		labelStatus.text = "OFFLINE"
+		level_beendet.emit(key)
 		
 	else:
 		fillButtons(data["options"])
