@@ -23,11 +23,17 @@ func _ready():
 	chat.level_beendet.connect(_on_level_beendet)
 	
 func _on_level_beendet(ergebnis_id: String):
-	await get_tree().create_timer(8.0).timeout # spiegelt den Delay wieder bis der Agent quatscht
+	lvl_button.hide()
+	main_button.hide()
+	
+	await get_tree().create_timer(8.0).timeout # spiegelt den Delay wieder, bis der Agent quatscht
+	
 	phase = "outro"
+	bereit_unten = false
+	bereit_oben = false
+	
 	chat.hide()
 	infoText.hide()
-	lvl_button.hide()
 	
 	var level_daten = load(aktuelles_level).new()
 	
@@ -71,12 +77,7 @@ func checke_start():
 			chat.lvlLoad(aktuelles_level)
 			
 		elif phase == "outro":
-			lvl_auswahl.show()
+			chat.show()
+			infoText.show()
+			lvl_button.show()
 			main_button.show()
-		
-		chat.show()
-		infoText.show()
-		lvl_button.show()
-		main_button.show()
-		
-		chat.lvlLoad(aktuelles_level)
