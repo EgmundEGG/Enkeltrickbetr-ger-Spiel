@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://dv4yx1ot62isy"]
+[gd_scene format=3 uid="uid://bex248excv36p"]
 
 [ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="1_p22fw"]
 [ext_resource type="Texture2D" uid="uid://djkox5221jpk2" path="res://image/tutorial.svg" id="2_0saqu"]
-[ext_resource type="Texture2D" uid="uid://bu0oaehqx7vy7" path="res://image/arrow_white.svg" id="2_g80va"]
+[ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="2_2r23g"]
+[ext_resource type="Texture2D" uid="uid://com16d60xr6ye" path="res://image/arrow_white.svg" id="2_g80va"]
 [ext_resource type="Texture2D" uid="uid://bt0j5cmtp7557" path="res://image/messenger_green.svg" id="3_g80va"]
 [ext_resource type="Texture2D" uid="uid://br13najnpejus" path="res://image/messenger_grey.svg" id="4_2r23g"]
 [ext_resource type="Texture2D" uid="uid://c4m4hcsmb41su" path="res://image/messenger_yellow.svg" id="5_ryg4c"]
@@ -82,6 +83,8 @@ theme_override_colors/font_color = Color(1.0039686, 1.0039686, 1.0039686, 1)
 theme_override_colors/icon_normal_color = Color(0.15294118, 0.2901961, 0.47843137, 1)
 text = "Zurück
 "
+script = ExtResource("2_2r23g")
+SceneName = "MainMenu"
 
 [node name="NextButton" type="Button" parent="LVLAuswahl/Header" unique_id=2065936734]
 custom_minimum_size = Vector2(70, 70)
@@ -96,6 +99,8 @@ theme_override_colors/font_color = Color(1.0039686, 1.0039686, 1.0039686, 1)
 text = "Weitere Level
 "
 icon = ExtResource("2_g80va")
+script = ExtResource("2_2r23g")
+SceneName = "MessengerLevelSelect"
 
 [node name="Content" type="MarginContainer" parent="LVLAuswahl" unique_id=619944190]
 layout_mode = 1
