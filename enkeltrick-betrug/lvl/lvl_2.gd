@@ -28,7 +28,7 @@ var dialog = {
 	"options": [
 		{"text": "Ich erwarte kein Paket", "next": "step2"},
 		{"text": "Vielleicht habe ich etwas vergessen", "next": "step2"},
-		{"text": "Ich prüfe das bei DHL", "next": "win"}
+		{"text": "Ich prüfe das bei DHL", "next": "pro_win"}
 	]
 },
 
@@ -37,7 +37,7 @@ var dialog = {
 	"options": [
 		{"text": "Das ist ja knapp", "next": "step3"},
 		{"text": "Ich will mein Paket nicht verlieren", "next": "step3"},
-		{"text": "Ich ignoriere das", "next": "win"}
+		{"text": "Ich ignoriere das", "next": "ignored"}
 	]
 },
 
@@ -55,7 +55,7 @@ var dialog = {
 	"options": [
 		{"text": "Ich öffne den Link", "next": "step_link"},
 		{"text": "Die URL wirkt falsch", "next": "win"},
-		{"text": "Ich gehe auf die echte DHL-Seite", "next": "win"}
+		{"text": "Ich gehe auf die echte DHL-Seite", "next": "pro_win"}
 	]
 },
 
@@ -71,7 +71,7 @@ var dialog = {
 	"text": "⏰ LETZTE WARNUNG:\nIhr Paket wird in 15 Minuten automatisch storniert.\nZusätzliche Rücksendekosten: 19,99€.",
 	"options": [
 		{"text": "Ich zahle sofort", "next": "lose"},
-		{"text": "Ich rufe DHL direkt an", "next": "win"},
+		{"text": "Ich rufe DHL direkt an", "next": "pro_win"},
 		{"text": "Ich breche ab", "next": "win"}
 	]
 },
@@ -82,11 +82,22 @@ var dialog = {
 },
 
 "win": {
-	"text": "✅ BETRUG ERKANNT\n\nSehr gut!\nDu hast typische Warnzeichen erkannt:\n- Zeitdruck\n- kleine Gebühr\n- unbekannter Link\n- künstliche Dringlichkeit\n\nDu bist sicher geblieben.",
+	"text": "✅ BETRUG ERKANNT\n\nSehr gut!\nDu hast typische Warnzeichen erkannt:\n- Zeitdruck\n- kleine Gebühr\n- unbekannter Link\n\nDu bist sicher geblieben.",
 	"options": []
 },
+
 "lucky": {
 	"text": "⚠️ GLÜCK GEHABT\n\nDu hast den Vorgang noch rechtzeitig abgebrochen!\nDas Geld ist sicher, aber das Anklicken des Links war extrem riskant. So können Betrüger Schadsoftware auf dein Smartphone laden.",
+	"options": []
+},
+
+"ignored": {
+	"text": "🛡️ IGNORIERT\n\nDu hast die Nachricht einfach ignoriert. Das ist sicher, aber du hast auch nicht überprüft, ob es vielleicht doch ein echtes Paket war.",
+	"options": []
+},
+
+"pro_win": {
+	"text": "⭐ PROFI-VERHALTEN\n\nGenial! Statt auf den Link in der SMS zu klicken, hast du die echte Website geöffnet oder angerufen. Das ist der ultimative Schutz vor Phishing!",
 	"options": []
 }
 }
@@ -96,7 +107,7 @@ var auswertung_unten = {
 		"Sehr gut! Sie sind auf den falschen Paketdienst nicht hereingefallen.",
 		"Kleine Gebühren und hoher Zeitdruck sind absolute Warnsignale. Sie haben Ihre Daten erfolgreich beschützt!"
 	],
-	"lucky": [ # dasselbe wie vorher bei lvl_0
+	"lucky": [ 
 		"Puh, das war knapp!",
 		"Sie haben die Datenabfrage im letzten Moment abgebrochen und kein Geld verloren. Aber Vorsicht:",
 		"Allein das Anklicken von Links aus solchen SMS kann gefährliche Viren auf Ihr Smartphone laden!"
@@ -105,6 +116,14 @@ var auswertung_unten = {
 		"Leider war das ein Betrug. Sie haben Ihre Zahlungsdaten an Betrüger gegeben.",
 		"Der angebliche Paketdienst hat Sie mit künstlichem Zeitdruck in die Falle gelockt.",
 		"Geben Sie niemals Bankdaten über Links in solchen SMS oder Mails ein!"
+	],
+	"ignored": [
+		"Sicher ist sicher! Sie haben die Nachricht gelöscht.",
+		"Noch besser wäre es gewesen, die Sendungsnummer kurz in der offiziellen DHL-App zu prüfen, um 100% sicher zu sein."
+	],
+	"pro_win": [
+		"Herausragend! Sie haben die goldene Regel befolgt:",
+		"Niemals Links in Mails klicken, sondern die offizielle Website manuell im Browser öffnen. Besser kann man es nicht machen!"
 	]
 }
 
@@ -113,12 +132,20 @@ var auswertung_oben = {
 		"Exzellente Arbeit vom Berater-Team! Sie haben den Phishing-Versuch schnell enttarnt.",
 		"Der gefälschte Link und der künstliche Druck wurden von Ihnen richtig als Betrug gedeutet."
 	],
-	"lucky": [ # dasselbe wie vorher in lvl_0
+	"lucky": [ 
 		"Da haben Sie nochmal Glück gehabt!",
 		"Ihr Mitspieler am Handy hat den gefährlichen Link angeklickt. Da hätten Sie als Berater lauter und früher warnen müssen!"
 	],
 	"lose": [
 		"Die Daten wurden gestohlen. Der Phishing-Angriff war leider erfolgreich.",
 		"Sie müssen beim nächsten Mal sofort eingreifen, wenn das Handy nach Kreditkartendaten oder Passwörtern fragt!"
+	],
+	"ignored": [
+		"Eine entspannte Lösung des Teams.",
+		"Das Ignorieren von Spam ist völlig legitim, auch wenn die tatsächliche Begründung dafür kurz ausfällt."
+	],
+	"pro_win": [
+		"Eine Meisterleistung der Beratung!",
+		"Sie haben den Spieler angeleitet, den Link zu ignorieren und stattdessen die offizielle Route zu gehen. Das ist IT-Sicherheit in Perfektion. Hut ab!"
 	]
 }
