@@ -127,7 +127,7 @@ var dialog = {
 "vertrauen2": {
 	"text": "Kein Problem. Man muss heutzutage vorsichtig sein. Ich wollte eigentlich nur Bescheid geben, damit du meine neue Nummer speichern kannst.",
 	"options": [
-		{"text": "Das mache ich.", "next": "win"},
+		{"text": "Okay, ich speichere die Nummer.", "next": "leichtsinnig"},
 		{"text": "Ich überprüfe die Nummer zuerst.", "next": "win"},
 		{"text": "Ich glaube trotzdem an Betrug.", "next": "lose"}
 	]
@@ -155,7 +155,7 @@ var dialog = {
 	"text": "Ein paar Minuten später bestätigst du die Nummer bei seinen Eltern. Die Nummer gehört tatsächlich deinem Enkel.",
 	"options": [
 		{"text": "Gut, dann speichere ich sie.", "next": "win"},
-		{"text": "Jetzt glaube ich dir.", "next": "win"}
+		{"text": "Jetzt bin ich beruhigt.", "next": "win"}
 	]
 },
 
@@ -164,8 +164,42 @@ var dialog = {
 	"options": []
 },
 
+"leichtsinnig": {
+	"text": "⚠️ LEICHTSINNIG!\n\nEs war zwar wirklich dein Enkel, aber du hast die Nummer am Ende einfach ohne Prüfung gespeichert. Bei einem echten Betrüger wäre das sehr gefährlich gewesen!",
+	"options": []
+},
+
 "lose": {
 	"text": "❌ FALSCHE ENTSCHEIDUNG\n\nDies war kein Betrug.\n\nVorsicht ist wichtig, aber nicht jede neue Nummer ist automatisch ein Enkeltrick.\n\nEin wichtiges Merkmal echter Kontakte ist, dass sie Nachfragen akzeptieren und ihre Identität überprüfen lassen.",
 	"options": []
 }
+}
+
+var auswertung_unten = {
+	"win": [
+		"Klasse! Sie haben den Kontakt ruhig und systematisch überprüft.",
+		"Genau so sollte man bei neuen Nummern vorgehen, selbst wenn es kein Betrug ist."
+	],
+	"leichtsinnig": [
+		"Glück gehabt! Es war diesmal tatsächlich Ihr echter Enkel.",
+		"Aber Sie haben die neue Nummer am Ende einfach akzeptiert, ohne sie z.B. bei den Eltern zu überprüfen.",
+		"Genau diese Gutgläubigkeit nutzen Enkeltrick-Betrüger gnadenlos aus. Seien Sie beim nächsten Mal kritischer!"
+	],
+	"lose": [
+		"Schade, Sie haben einen echten Kontakt blockiert.",
+		"Ein gesundes Misstrauen ist super, aber Sie sollten Familienmitgliedern die Chance geben, ihre Identität zu beweisen (z.B. durch einen Anruf)."
+	]
+}
+
+var auswertung_oben = {
+	"win": [
+		"Tolles Teamwork! Sie haben dem Spieler geholfen, die Identität vernünftig zu klären."
+	],
+	"leichtsinnig": [
+		"Das war etwas leichtsinnig beraten!",
+		"Die Gruppe hat die neue Nummer blind akzeptiert, ohne kritische Nachfragen zu stellen. Das hätte auch ein Betrüger sein können."
+	],
+	"lose": [
+		"Da haben Sie den Spieler am Handy wohl etwas zu misstrauisch gemacht. Das war kein Betrüger."
+	]
 }
