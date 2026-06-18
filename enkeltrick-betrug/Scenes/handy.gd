@@ -35,7 +35,7 @@ func _on_level_beendet(ergebnis_id: String):
 	chat.hide()
 	infoText.hide()
 	
-	var level_daten = load(aktuelles_level).new()
+	var level_daten = chat.current_level
 	
 	agent_unten.start_dialogue(level_daten.auswertung_unten[ergebnis_id])
 	agent_oben.start_dialogue(level_daten.auswertung_oben[ergebnis_id])

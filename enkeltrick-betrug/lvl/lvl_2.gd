@@ -132,7 +132,7 @@ var auswertung_oben = {
 		"Exzellente Arbeit vom Berater-Team! Sie haben den Phishing-Versuch schnell enttarnt.",
 		"Der gefälschte Link und der künstliche Druck wurden von Ihnen richtig als Betrug gedeutet."
 	],
-	"lucky": [ 
+	"lucky": [
 		"Da haben Sie nochmal Glück gehabt!",
 		"Ihr Mitspieler am Handy hat den gefährlichen Link angeklickt. Da hätten Sie als Berater lauter und früher warnen müssen!"
 	],
