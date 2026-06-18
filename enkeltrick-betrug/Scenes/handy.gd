@@ -9,7 +9,7 @@ extends Node
 
 var bereit_unten = false
 var bereit_oben = false
-var aktuelles_level = ""
+var phase = "intro"
 
 func _ready():
 	agent_unten.hide()
@@ -18,11 +18,31 @@ func _ready():
 	agent_unten.tutorial_finished.connect(_on_agent_unten_fertig)
 	agent_oben.tutorial_finished.connect(_on_agent_oben_fertig)
 	
+	chat.level_beendet.connect(_on_level_beendet)
 	starte_level_mit_tutorial()
+	
+func _on_level_beendet(ergebnis_id: String):
+	lvl_button.hide()
+	main_button.hide()
+	
+	await get_tree().create_timer(8.0).timeout # spiegelt den Delay wieder, bis der Agent quatscht
+	
+	phase = "outro"
+	bereit_unten = false
+	bereit_oben = false
+	
+	chat.hide()
+	infoText.hide()
+	
+	var level_daten = chat.current_level
+	
+	agent_unten.start_dialogue(level_daten.auswertung_unten[ergebnis_id])
+	agent_oben.start_dialogue(level_daten.auswertung_oben[ergebnis_id])
 
 func starte_level_mit_tutorial():
 	bereit_unten = false
 	bereit_oben = false
+	phase = "intro"
 	
 	# Kram ausblenden
 	chat.hide()
@@ -46,9 +66,15 @@ func _on_agent_oben_fertig():
 func checke_start():
 	if bereit_unten and bereit_oben:
 		
-		chat.show()
-		infoText.show()
-		lvl_button.show()
-		main_button.show()
-		
-		chat.lvlLoad(GameState.selected_level)
+		if phase == "intro":
+			chat.show()
+			infoText.show()
+			lvl_button.show()
+			main_button.show()
+			chat.lvlLoad(GameState.selected_level)
+			
+		elif phase == "outro":
+			chat.show()
+			infoText.show()
+			lvl_button.show()
+			main_button.show()

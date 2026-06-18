@@ -18,8 +18,8 @@ var dialog = {
 	"text": "📩 E-Mail eingegangen:\n\nBetreff: „Kurz wegen gestern“\n\nHallo,\nich wollte kurz nach dem Termin gestern nachfragen.\nHast du die Unterlagen noch? Falls ja, könntest du sie mir nochmal schicken?\n\nDanke dir.",
 	"options": [
 		{"text": "Welche Unterlagen?", "next": "step1"},
-		{"text": "Ich kenne dich nicht", "next": "fail"},
-		{"text": "Ja ich schicke sie dir", "next": "win"}
+		{"text": "Ich kenne dich nicht", "next": "abrupt"},
+		{"text": "Ja ich schicke sie dir", "next": "lucky"}
 	]
 },
 
@@ -46,7 +46,7 @@ var dialog = {
 	"options": [
 		{"text": "Ja gerne", "next": "win"},
 		{"text": "Doch alles gut, ich erinnere mich", "next": "win"},
-		{"text": "Ich breche den Kontakt ab", "next": "fail"}
+		{"text": "Ich breche den Kontakt ab", "next": "ignorant"}
 	]
 },
 
@@ -66,6 +66,68 @@ var dialog = {
 "fail": {
 	"text": "❌ FALSCHE ENTSCHEIDUNG\n\nDu hast einen echten Kontakt abgeblockt oder abgelehnt.\n\nEs war KEIN Betrug, nur eine normale, wenn auch unklare Nachricht.",
 	"options": []
+},
+
+"lucky": {
+	"text": "⚠️ GLÜCK GEHABT!\n\nEs war tatsächlich ein echter Kollege. Aber einfach blind Dateien zu verschicken, war extrem leichtsinnig!",
+	"options": []
+},
+
+"abrupt": {
+	"text": "🛡️ ETWAS ZU HART\n\nDu hast den Kontakt sofort abgeblockt. Das ist sicher, aber im Berufsalltag oft unhöflich, da es ein echter Kollege war.",
+	"options": []
+},
+
+"ignorant": {
+	"text": "❌ UNHÖFLICH\n\nDer Kollege wollte dir gerade erklären, worum es geht, und du hast einfach den Kontakt abgebrochen. Da warst du zu misstrauisch!",
+	"options": []
+}
 }
 
+#Agent-Auswertung
+var auswertung_unten = {
+	"win": [
+		"Gut reagiert! Sie haben durch clevere Nachfragen herausgefunden, wer da schreibt.",
+		"Es war tatsächlich nur ein unorganisierter Kollege. Sie haben den Kontakt erfolgreich geklärt."
+	],
+	"lucky": [ 
+		"Halt, Moment mal! Sie haben die Dateien einfach blind verschickt, ohne zu wissen, wer am anderen Ende ist?",
+		"Sie hatten Glück, dass es wirklich ein Kollege war. Bei einem Betrüger wären Ihre Daten jetzt weg!",
+		"Lektion für die Zukunft: Erst kritisch nachfragen, dann sensible Daten verschicken!"
+	],
+	"fail": [
+		"Das war leider eine Fehlentscheidung. Sie haben einen echten Kollegen blockiert.",
+		"Nicht jede kurze Nachricht ist Betrug. Achten Sie darauf, ob die Person auf Ihre Nachfragen sachlich eingeht."
+	],
+	"abrupt": [
+		"Das war eine sehr kalte Reaktion. Sie haben sofort geblockt.",
+		"Sicherheitsbewusstsein ist gut, aber ein einfaches 'Wer ist da?' hätte den Kollegen nicht direkt vor den Kopf gestoßen."
+	],
+	"ignorant": [
+		"Schade, der Kollege wollte gerade das Missverständnis aufklären und Sie haben abgebrochen.",
+		"Manchmal lohnt es sich, ein paar Textzeilen mehr zu investieren, bevor man den Stecker zieht."
+	]
+}
+
+var auswertung_oben = {
+	"win": [
+		"Klasse Beratung! Sie haben richtig erkannt, dass hier kein klassisches Betrugsmuster vorlag.",
+		"Ihre Tipps haben geholfen, den echten Kontakt zu verifizieren."
+	],
+	"lucky": [ 
+		"Da hat Ihr Mitspieler am Handy aber extrem leichtsinnig gehandelt!",
+		"Sie hätten ihn lauter warnen müssen, nicht einfach blind Dateien an Unbekannte zu schicken. Da hatten Sie als Gruppe großes Glück."
+	],
+	"fail": [
+		"Hier waren Sie als Berater-Team vielleicht etwas zu misstrauisch.",
+		"Der Absender hat keine verdächtigen Links geschickt oder Geld gefordert. Er war einfach nur unhöflich."
+	],
+	"abrupt": [
+		"Da haben Sie den Spieler am Handy wohl etwas zu paranoid gemacht.",
+		"Raten Sie beim nächsten Mal dazu, zumindest die Identität zu erfragen, bevor man den Kontakt abbricht."
+	],
+	"ignorant": [
+		"Da haben Sie als Berater-Team überreagiert.",
+		"Der Chat-Partner hat Hilfe angeboten, um die Situation zu erklären. Das ist kein typisches Betrüger-Verhalten."
+	]
 }

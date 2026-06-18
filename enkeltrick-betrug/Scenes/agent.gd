@@ -13,7 +13,7 @@ var skip_status = 0
 func _ready():
 	skip_button.pressed.connect(_on_skip_button_pressed)
 
-func start_dialogue(texte: Array[String]):
+func start_dialogue(texte: Array):
 	dialog_texte = texte
 	aktueller_index = 0
 	
