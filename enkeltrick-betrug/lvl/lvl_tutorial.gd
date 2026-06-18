@@ -30,3 +30,17 @@ var dialog = {
 		"options": []
 	}
 }
+
+var auswertung_unten = {
+	"win": [
+		"Perfekt! Sie haben das Tutorial erfolgreich abgeschlossen.",
+		"Sie wissen nun, wie die Steuerung funktioniert. Kehren Sie ins Menü zurück und starten Sie Ihren ersten Fall."
+	]
+}
+
+var auswertung_oben = {
+	"win": [
+		"Klasse, das Tutorial ist geschafft!",
+		"Machen Sie sich bereit für die erste echte Ermittlung. Hören Sie genau zu und unterstützen Sie Ihren Mitspieler. Viel Spaß!"
+	]
+}
