@@ -1,87 +1,98 @@
 [gd_scene format=3 uid="uid://bemjjo0lwwlhi"]
 
-[ext_resource type="Script" uid="uid://cwtrq8ufoa0dv" path="res://assets/audio/button_title_animate.gd" id="3_osvgy"]
-[ext_resource type="Script" uid="uid://blcrho40677o" path="res://assets/audio/volume_slider_master.gd" id="4_0crpi"]
+[ext_resource type="Theme" uid="uid://bm2ldkru2vs54" path="res://assets/audio/Material3.tres" id="1_lhmql"]
+[ext_resource type="Texture2D" uid="uid://chg02w8qfxkwt" path="res://assets/audio/arrow.png" id="2_aaqfp"]
+[ext_resource type="Script" uid="uid://bst1u80twjaqr" path="res://Scenes/sound_settings.gd" id="2_j2dne"]
+[ext_resource type="Script" uid="uid://c070ik216n6ty" path="res://Scenes/leave.gd" id="3_j2dne"]
+[ext_resource type="Script" uid="uid://blcrho40677o" path="res://Scenes/volume_slider_master.gd" id="4_0crpi"]
 
 [node name="PanelContainer" type="PanelContainer" unique_id=766532736]
-offset_left = 494.0
-offset_top = 192.0
-offset_right = 658.0
-offset_bottom = 455.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
+theme = ExtResource("1_lhmql")
+script = ExtResource("2_j2dne")
 
-[node name="Control" type="Control" parent="." unique_id=137633378]
+[node name="Background" type="ColorRect" parent="." unique_id=253718393]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
+color = Color(0.89, 0.89, 0.89, 1)
 
-[node name="Button" type="Button" parent="Control" unique_id=578511593]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -31.0
-offset_right = 30.0
-grow_vertical = 0
-text = "✖"
-icon_alignment = 1
-script = ExtResource("3_osvgy")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1925309046]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=362529329]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1445273088]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1925309046]
 layout_mode = 2
 
-[node name="Sound" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1354635203]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1357424078]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
+
+[node name="Leave" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=566597134]
+layout_mode = 2
+texture = ExtResource("2_aaqfp")
+expand_mode = 2
+script = ExtResource("3_j2dne")
+SceneName = "MainMenu"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1425146281]
+layout_mode = 2
+
+[node name="Sound" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1354635203]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Sound"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer" unique_id=1060505272]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1060505272]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="Master" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1064216833]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1445273088]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1064216833]
 layout_mode = 2
 text = "Master"
 
-[node name="Master_Slider" type="HSlider" parent="VBoxContainer/VBoxContainer" unique_id=463724133]
+[node name="Master_Slider" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=463724133]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 script = ExtResource("4_0crpi")
 bus_name = "Master"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer" unique_id=555848649]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=555848649]
 layout_mode = 2
 
-[node name="Music" type="Label" parent="VBoxContainer/VBoxContainer2" unique_id=1271962636]
+[node name="Music" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1271962636]
 layout_mode = 2
 text = "Musik"
 
-[node name="Music_Slider" type="HSlider" parent="VBoxContainer/VBoxContainer2" unique_id=381331826]
+[node name="Music_Slider" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=381331826]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 script = ExtResource("4_0crpi")
 bus_name = "Music"
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer" unique_id=1465617679]
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1465617679]
 layout_mode = 2
 
-[node name="Master" type="Label" parent="VBoxContainer/VBoxContainer3" unique_id=1808164514]
+[node name="Sound_Effect" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer3" unique_id=1808164514]
 layout_mode = 2
 text = "Sound Effekte"
 
-[node name="Sound_Effect_Silder" type="HSlider" parent="VBoxContainer/VBoxContainer3" unique_id=2100562526]
+[node name="Sound_Effect_Silder" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer3" unique_id=2100562526]
 layout_mode = 2
 max_value = 1.0
 step = 0.001

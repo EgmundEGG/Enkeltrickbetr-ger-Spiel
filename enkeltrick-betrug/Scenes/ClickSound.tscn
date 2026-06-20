@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://rc7paoxc8fgp"]
+
+[ext_resource type="AudioStream" uid="uid://b8jliy2sp12bw" path="res://assets/audio/Klickgeräusch_Navigation.mp3" id="1_hfpro"]
+
+[node name="ClickSound" type="AudioStreamPlayer" unique_id=1235730771]
+stream = ExtResource("1_hfpro")
+bus = &"Sound Effect"

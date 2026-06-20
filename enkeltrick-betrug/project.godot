@@ -12,8 +12,12 @@ config_version=5
 
 config/name="EnkeltrickBetrug"
 run/main_scene="uid://c4owf0cu5p2fy"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ClickSound="*uid://rc7paoxc8fgp"
 
 [physics]
 

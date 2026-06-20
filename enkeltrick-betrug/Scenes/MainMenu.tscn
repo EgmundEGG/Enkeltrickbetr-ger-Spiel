@@ -265,7 +265,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i26rj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_eiy7p")
 icon_alignment = 1
 script = ExtResource("1_tt5f1")
-SceneName = "MainMenu"
+SceneName = "settings"
 
 [node name="Label" type="Label" parent="BottomRight" unique_id=856267407]
 layout_mode = 1
