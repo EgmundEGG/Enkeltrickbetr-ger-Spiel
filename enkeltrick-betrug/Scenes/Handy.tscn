@@ -4,9 +4,7 @@
 [ext_resource type="Script" uid="uid://cbfd23nrlppi8" path="res://Scenes/handy.gd" id="1_u0qhy"]
 [ext_resource type="Texture2D" uid="uid://bf3wm35tkqn0e" path="res://image/Lvl hintergrund.png" id="2_lf3ts"]
 [ext_resource type="Texture2D" uid="uid://e2gjdxh3l2at" path="res://image/PostIt.png" id="3_r48s6"]
-[ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="4_btpht"]
 [ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="5_kjkul"]
-[ext_resource type="PackedScene" uid="uid://bemjjo0lwwlhi" path="res://assets/audio/settings.tscn" id="5_pwgpe"]
 [ext_resource type="AudioStream" uid="uid://w1berqlnkbcm" path="res://assets/audio/atlasaudio-comedy-518068.mp3" id="6_ole5j"]
 [ext_resource type="PackedScene" uid="uid://cahggf1nf718" path="res://Scenes/Agent.tscn" id="7_r48s6"]
 [ext_resource type="AudioStream" uid="uid://c68kdfam2ojua" path="res://assets/audio/Knopfgeräusch.mp3" id="7_srqa7"]
@@ -15,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://b7va085fv71hi" path="res://assets/audio/Fehlersound.mp3" id="10_mrt62"]
 [ext_resource type="AudioStream" uid="uid://dl1k4ei1ew4kl" path="res://assets/audio/Plopsound.mp3" id="11_wpgbr"]
 [ext_resource type="AudioStream" uid="uid://b8jliy2sp12bw" path="res://assets/audio/Klickgeräusch_Navigation.mp3" id="12_l4yc5"]
+[ext_resource type="Texture2D" uid="uid://cwvkjj03aytrt" path="res://image/canva-user-icon-MAF4KJDz63E.png" id="14_0vipr"]
 
 [node name="Game" type="Control" unique_id=264381244]
 custom_minimum_size = Vector2(400, 0)
@@ -26,7 +25,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u0qhy")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=633416753]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lf3ts")
+expand_mode = 1
+flip_h = true
+
 [node name="LvlHintergrund" type="Sprite2D" parent="." unique_id=122819531]
+visible = false
 position = Vector2(580.62506, 323)
 scale = Vector2(1.2328879, 0.8864569)
 texture = ExtResource("2_lf3ts")
@@ -86,10 +97,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 393.00006
-offset_top = 418.99997
-offset_right = -561.0
-offset_bottom = -28.999878
+offset_left = 392.00006
+offset_top = 327.99997
+offset_right = -562.0
+offset_bottom = -119.99988
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
@@ -126,10 +137,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 602.00006
-offset_top = 368.99994
-offset_right = -352.0
-offset_bottom = -78.99994
+offset_left = 360.00003
+offset_top = 95.99997
+offset_right = -594.0
+offset_bottom = -351.9999
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
@@ -166,10 +177,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 851.00006
-offset_top = 431.9999
-offset_right = -103.0
-offset_bottom = -16.0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = -834.00006
+offset_bottom = -367.9999
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
@@ -204,15 +215,8 @@ text_overrun_behavior = 1
 [node name="Chat" type="Control" parent="." unique_id=1049416561]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = -499.0
-offset_top = 245.0
-offset_right = -99.0
-offset_bottom = 245.0
-grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.6, 0.6)
 script = ExtResource("1_adtv2")
@@ -303,17 +307,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="LvLButton" type="Control" parent="." unique_id=1116624081]
+visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -20.0
+offset_left = -40.0
 offset_top = -20.0
-offset_right = 20.0
 offset_bottom = 20.0
-grow_horizontal = 2
+grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="LvLButton" unique_id=417609308]
@@ -360,16 +364,12 @@ stream = ExtResource("11_wpgbr")
 [node name="Navigationsknöpfe" type="AudioStreamPlayer" parent="." unique_id=1036465816]
 stream = ExtResource("12_l4yc5")
 
-[node name="Main_Button" type="Button" parent="." unique_id=1155998799]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -153.0
-offset_top = 16.0
-offset_right = -15.0
-offset_bottom = 99.0
-grow_horizontal = 2
+[node name="Main_Button" type="Button" parent="." unique_id=121951125]
+visible = false
+layout_mode = 0
+offset_left = 1051.0
+offset_right = 1152.0
+offset_bottom = 31.0
 text = "Hauptmenü"
 script = ExtResource("5_kjkul")
 SceneName = "MainMenu"
@@ -388,5 +388,265 @@ visible = false
 layout_mode = 1
 offset_top = -651.0
 offset_bottom = -1.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2031241136]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1492703127]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="ColorRect" parent="ColorRect/VBoxContainer" unique_id=658276769]
+layout_mode = 2
+color = Color(0.36282963, 0.36282942, 0.36282945, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer/Header" unique_id=916876207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Avatar" type="TextureRect" parent="ColorRect/VBoxContainer/Header/HBoxContainer" unique_id=2081717227]
+layout_mode = 2
+texture = ExtResource("14_0vipr")
+expand_mode = 2
+
+[node name="Control" type="Control" parent="ColorRect/VBoxContainer/Header/HBoxContainer" unique_id=1526097991]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="ColorRect/VBoxContainer/Header/HBoxContainer" unique_id=195213580]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="ColorRect/VBoxContainer/Header/HBoxContainer" unique_id=427794137]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Status" type="Label" parent="ColorRect/VBoxContainer/Header/HBoxContainer" unique_id=1788066291]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Online/Offline"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/VBoxContainer" unique_id=926072804]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MessageContainer" type="VBoxContainer" parent="ColorRect/VBoxContainer/ScrollContainer" unique_id=418772630]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Footer" type="ColorRect" parent="ColorRect/VBoxContainer" unique_id=1607036109]
+layout_mode = 2
+color = Color(0.3647059, 0.3647059, 0.3647059, 1)
+
+[node name="Buttonbox" type="VBoxContainer" parent="ColorRect/VBoxContainer/Footer" unique_id=1095177143]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/Footer/Buttonbox" unique_id=626344380]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button2" type="Button" parent="ColorRect/VBoxContainer/Footer/Buttonbox" unique_id=1544736510]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button3" type="Button" parent="ColorRect/VBoxContainer/Footer/Buttonbox" unique_id=124954842]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1398345574]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_right = -100.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PostIt1" type="TextureRect" parent="GridContainer" unique_id=606436596]
+layout_mode = 2
+texture = ExtResource("3_r48s6")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="GridContainer/PostIt1" unique_id=658461506]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.861023e-05
+offset_bottom = -127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Lust auf Kuchen ?"
+horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Content" type="Label" parent="GridContainer/PostIt1" unique_id=299515050]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.000002
+offset_top = 23.0
+offset_right = -2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Die Betreuungspersonen können nichts dagegen tun, wenn Du sie beißt.."
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="PostIt2" type="TextureRect" parent="GridContainer" unique_id=1052168077]
+layout_mode = 2
+texture = ExtResource("3_r48s6")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="GridContainer/PostIt2" unique_id=1366275110]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.861023e-05
+offset_bottom = -127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Zeitdruck"
+horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Content" type="Label" parent="GridContainer/PostIt2" unique_id=2041573276]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.000002
+offset_top = 23.0
+offset_right = -2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Viele Betrüger wollen Dir weismachen, etwas müsse sofort sein."
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="PostIt3" type="TextureRect" parent="GridContainer" unique_id=1956235928]
+layout_mode = 2
+texture = ExtResource("3_r48s6")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="GridContainer/PostIt3" unique_id=1892125128]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.861023e-05
+offset_bottom = -127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Links"
+horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Content" type="Label" parent="GridContainer/PostIt3" unique_id=308961880]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.000002
+offset_top = 23.0
+offset_right = -2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Klicke nicht auf jeden Link, den Du siehst. Manchmal sehen diese nach einem genaueren Blick nicht ganz richtig aus."
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="PostIt4" type="TextureRect" parent="GridContainer" unique_id=368591530]
+layout_mode = 2
+texture = ExtResource("3_r48s6")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="GridContainer/PostIt4" unique_id=502866965]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.861023e-05
+offset_bottom = -127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Familienmitglied ?"
+horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Content" type="Label" parent="GridContainer/PostIt4" unique_id=1942484646]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.000002
+offset_top = 23.0
+offset_right = -2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Vielleicht kannst Du eventuelle neue Telefonnummern von einem anderen Familienmitglied bestätigen lassen."
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=856710183]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Main_Button" type="Button" parent="VBoxContainer" unique_id=1155998799]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Hauptmenü"
+script = ExtResource("5_kjkul")
+SceneName = "MainMenu"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=708381763]
+custom_minimum_size = Vector2(55, 50)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0.827451, 0.8862745, 0.5019608)
+action_mode = 0
+text = "LVL"
+script = ExtResource("5_kjkul")
+SceneName = "MessengerLevelSelect"
 
 [connection signal="pressed" from="LvLButton/Button" to="Chat" method="_on_button_pressed"]

@@ -7,6 +7,17 @@ extends Node
 @onready var main_button = $Main_Button
 @onready var infoText = $Infotext
 
+@onready var unten_box = $ColorRect
+@onready var header = $ColorRect/VBoxContainer/Header
+@onready var footer = $ColorRect/VBoxContainer/Footer
+@onready var grid = $GridContainer
+@onready var selection = $VBoxContainer
+
+@onready var labels = [
+	$ColorRect/VBoxContainer/Header/HBoxContainer/Name,
+	$ColorRect/VBoxContainer/Header/HBoxContainer/Status
+]
+
 var bereit_unten = false
 var bereit_oben = false
 var phase = "intro"
@@ -20,6 +31,8 @@ func _ready():
 	
 	chat.level_beendet.connect(_on_level_beendet)
 	starte_level_mit_tutorial()
+	_update_ui_scaling()
+	get_tree().get_root().size_changed.connect(_update_ui_scaling)
 	
 func _on_level_beendet(ergebnis_id: String):
 	lvl_button.hide()
@@ -78,3 +91,25 @@ func checke_start():
 			infoText.show()
 			lvl_button.show()
 			main_button.show()
+
+func _update_ui_scaling() -> void:
+	print("SIZE CHANGE")
+	await get_tree().create_timer(0.1).timeout
+	var screen_height: float = get_viewport().size.y
+	var screen_width: float = get_viewport().size.x
+	var new_font_size: int = int(screen_height * 0.01)
+	
+	
+	#THIS WAIT TIMER IS VERY IMPORTANT IT WAITS TILL EVERY ITEM IS REDRAWN
+	#and yes it doesnt check for a redraw it just waits
+	await get_tree().create_timer(0.1).timeout
+	
+	unten_box.custom_minimum_size.x = screen_width/2
+	footer.custom_minimum_size.y = screen_height/6
+	header.custom_minimum_size.y = screen_height/6
+	grid.custom_minimum_size.x = screen_width/2 - screen_width/10
+	selection.custom_minimum_size.x = screen_width/10
+	for t in labels:
+		t.add_theme_font_size_override("font_size", new_font_size*6)
+	
+	
