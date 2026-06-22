@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://crvsd7uyqch82" path="res://chat.gd" id="1_adtv2"]
 [ext_resource type="Script" uid="uid://cbfd23nrlppi8" path="res://Scenes/handy.gd" id="1_u0qhy"]
 [ext_resource type="Texture2D" uid="uid://bf3wm35tkqn0e" path="res://image/Lvl hintergrund.png" id="2_lf3ts"]
-[ext_resource type="Script" uid="uid://byrtcbu5wo2km" path="res://lv_l_button.gd" id="3_i3lhd"]
 [ext_resource type="Texture2D" uid="uid://e2gjdxh3l2at" path="res://image/PostIt.png" id="3_r48s6"]
 [ext_resource type="Script" uid="uid://rghbh5jd0a8o" path="res://lvl_auswahl.gd" id="4_btpht"]
 [ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="5_kjkul"]
+[ext_resource type="PackedScene" uid="uid://bemjjo0lwwlhi" path="res://assets/audio/settings.tscn" id="5_pwgpe"]
 [ext_resource type="AudioStream" uid="uid://w1berqlnkbcm" path="res://assets/audio/atlasaudio-comedy-518068.mp3" id="6_ole5j"]
 [ext_resource type="PackedScene" uid="uid://cahggf1nf718" path="res://Scenes/Agent.tscn" id="7_r48s6"]
 [ext_resource type="AudioStream" uid="uid://c68kdfam2ojua" path="res://assets/audio/Knopfgeräusch.mp3" id="7_srqa7"]
@@ -61,7 +61,7 @@ anchor_bottom = 1.0
 offset_left = -2.861023e-05
 offset_bottom = -127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Lsut auf Kuchen ?"
+text = "Lust auf Kuchen ?"
 horizontal_alignment = 1
 clip_text = true
 text_overrun_behavior = 1
@@ -333,75 +333,8 @@ grow_vertical = 2
 theme_override_colors/font_disabled_color = Color(0, 0.827451, 0.8862745, 0.5019608)
 action_mode = 0
 text = "LVL"
-script = ExtResource("3_i3lhd")
-
-[node name="LVLAuswahl" type="Control" parent="." unique_id=710270965]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_btpht")
-
-[node name="ColorRect" type="ColorRect" parent="LVLAuswahl" unique_id=1041814951]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1113.0
-offset_bottom = 604.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextEdit" type="TextEdit" parent="LVLAuswahl" unique_id=835186091]
-layout_mode = 1
-offset_left = 15.0
-offset_top = 6.0
-offset_right = 1044.0
-offset_bottom = 82.0
-text = "LVL Auswahl"
-editable = false
-
-[node name="Button_Tutorial" type="Button" parent="LVLAuswahl" unique_id=916298320]
-layout_mode = 0
-offset_left = 104.0
-offset_top = 193.0
-offset_right = 216.0
-offset_bottom = 296.0
-text = "Tutorial"
-
-[node name="Button" type="Button" parent="LVLAuswahl" unique_id=1923458663]
-layout_mode = 0
-offset_left = 285.0
-offset_top = 193.0
-offset_right = 397.0
-offset_bottom = 296.0
-text = "LVL 1"
-
-[node name="Button2" type="Button" parent="LVLAuswahl" unique_id=883536380]
-layout_mode = 0
-offset_left = 465.0
-offset_top = 193.0
-offset_right = 577.0
-offset_bottom = 296.0
-text = "LVL 2"
-
-[node name="Button3" type="Button" parent="LVLAuswahl" unique_id=580341785]
-layout_mode = 0
-offset_left = 654.0
-offset_top = 192.0
-offset_right = 766.0
-offset_bottom = 295.0
-text = "LVL 3
-"
-
-[node name="Exit" type="Button" parent="LVLAuswahl" unique_id=111748795]
-layout_mode = 0
-offset_left = 1055.0
-offset_top = 6.0
-offset_right = 1147.0
-offset_bottom = 82.0
-text = "X
-"
+script = ExtResource("5_kjkul")
+SceneName = "MessengerLevelSelect"
 
 [node name="Background" type="AudioStreamPlayer" parent="." unique_id=328148400]
 stream = ExtResource("6_ole5j")

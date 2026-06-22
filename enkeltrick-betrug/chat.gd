@@ -1,5 +1,7 @@
 extends Control
 
+signal level_beendet(end_knoten) #für Agent-Auswertung
+
 var avatar = "*BiLD*"
 var names = "SOHN"
 var status = true 
@@ -23,7 +25,7 @@ var dialog = {}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setData(avatar,names,status)
-	lvlLoad("res://lvl/lvl_1.gd")
+	lvlLoad(GameState.selected_level)
 	button1.pressed.connect(_on_button1_pressed)
 	button2.pressed.connect(_on_button2_pressed)
 	button3.pressed.connect(_on_button3_pressed)
@@ -106,6 +108,7 @@ func showStep(key:String) ->void:
 		button2.hide()
 		button3.hide()
 		labelStatus.text = "OFFLINE"
+		level_beendet.emit(key)
 		
 	else:
 		fillButtons(data["options"])

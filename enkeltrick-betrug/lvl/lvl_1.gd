@@ -36,7 +36,7 @@ var dialog = {
 	"text": "Mein altes Handy ist ins Wasser gefallen 😭 das ist jetzt meine neue Nummer",
 	"options": [
 		{"text": "Okay, was gibt's?", "next": "story"},
-		{"text": "Ich glaube dir nicht.", "next": "win"},
+		{"text": "Ich glaube dir nicht.", "next": "paranoid"},
 		{"text": "Ich frage deine Eltern.", "next": "win"}
 	]
 },
@@ -64,7 +64,7 @@ var dialog = {
 	"options": [
 		{"text": "Das ist viel Geld...", "next": "druck2"},
 		{"text": "Ich überweise sofort.", "next": "lose"},
-		{"text": "Ich prüfe das erst.", "next": "win"}
+		{"text": "Ich prüfe das erst.", "next": "lucky"}
 	]
 },
 
@@ -81,7 +81,7 @@ var dialog = {
 	"text": "Bitte Oma es ist dringend!! Ich bekomme sonst große Probleme 😭",
 	"options": [
 		{"text": "Okay ich zahle.", "next": "lose"},
-		{"text": "Das klingt nach Betrug.", "next": "win"},
+		{"text": "Das klingt nach Betrug.", "next": "lucky"},
 		{"text": "Ich komme vorbei.", "next": "enttarnt"}
 	]
 },
@@ -90,7 +90,7 @@ var dialog = {
 	"text": "Danke dir ❤️ ich schicke dir gleich die Kontodaten",
 	"options": [
 		{"text": "Alles klar.", "next": "lose"},
-		{"text": "Moment mal...", "next": "enttarnt"},
+		{"text": "Moment mal...", "next": "lucky"},
 		{"text": "Ich überprüfe das.", "next": "win"}
 	]
 },
@@ -99,7 +99,7 @@ var dialog = {
 	"text": "Ähm... ich muss später schreiben...",
 	"options": [
 		{"text": "Das ist Betrug!", "next": "win"},
-		{"text": "Ich melde das.", "next": "win"},
+		{"text": "Ich melde das bei der Polizei.", "next": "reported"},
 		{"text": "Keine Antwort mehr.", "next": "win"}
 	]
 },
@@ -130,5 +130,70 @@ var dialog = {
 "win": {
 	"text": "✅ Gut gemacht! Du hast den Betrug erkannt.",
 	"options": []
+},
+
+"lucky": {
+	"text": "⚠️ GLÜCK GEHABT!\n\nDu hast die Überweisung im allerletzten Moment noch abgebrochen! Das war ein Betrüger. Du hast ihm anfangs viel zu schnell vertraut, aber zum Glück dein Geld behalten.",
+	"options": []
+},
+
+"paranoid": {
+	"text": "🛡️ SEHR VORSICHTIG\n\nDu hast direkt bei der ersten Nachricht abgeblockt. Du bist zwar sicher, hast dem Betrüger aber keine Chance gegeben, sich selbst zu verraten.",
+	"options": []
+},
+
+"reported": {
+	"text": "⭐ PERFEKT GELÖST!\n\nDu hast den Betrüger nicht nur entlarvt, sondern direkt signalisiert, dass du die Chatverläufe der Polizei meldest. Besser geht es nicht!",
+	"options": []
 }
+}
+
+var auswertung_unten = {
+	"win": [
+		"Hervorragend! Sie haben den Betrug rechtzeitig erkannt.",
+		"Sie haben kritisch nachgefragt und keine Überweisung getätigt. Genau so schützt man sich!"
+	],
+	"lucky": [
+		"Puh, das war denkbar knapp!",
+		"Sie haben den Betrug erst im allerletzten Moment erkannt und fast Geld überwiesen.",
+		"Lektion für die Zukunft: Vertrauen Sie unbekannten Nummern niemals so lange. Klären Sie die Identität sofort am Anfang!"
+	],
+	"lose": [
+		"Das Spiel ist vorbei. Leider haben Sie das Geld überwiesen.",
+		"Der Betrüger hat Zeitdruck aufgebaut ('Ich bekomme sonst große Probleme') und Sie manipuliert.",
+		"Merken Sie sich: Bei Geldforderungen über Messenger immer erst persönlich anrufen!"
+	],
+	"paranoid": [
+		"Sie haben den Kontakt direkt nach der ersten Nachricht beendet.",
+		"Damit sind Sie absolut sicher, aber es hätte auch wirklich Ihr Enkel sein können.",
+		"Ein kurzer Anruf zur Sicherheit schadet nie!"
+	],
+	"reported": [
+		"Absolut vorbildlich! Das war eine Lehrbuch-Reaktion.",
+		"Sie haben den Betrug entlarvt und der Hinweis auf die Polizei ist die perfekte Reaktion, um Betrüger abzuschrecken."
+	]
+}
+
+var auswertung_oben = {
+	"win": [
+		"Klasse Beratung! Ihr Team hat die richtigen Schlüsse gezogen.",
+		"Sie haben rechtzeitig erkannt, dass die angebliche Notsituation nur erfunden war."
+	],
+	"lucky": [
+		"Da haben Sie als Team nochmal riesiges Glück gehabt!",
+		"Ihr Mitspieler am Handy war extrem leichtgläubig und stand kurz vor der Überweisung.",
+		"Sie müssen als Berater viel lauter und früher Alarm schlagen, wenn Unbekannte plötzlich von Geld schreiben!"
+	],
+	"lose": [
+		"Der Betrug war erfolgreich. Das Geld ist weg.",
+		"Beim nächsten Mal müssen Sie den Spieler am Handy lauter und früher warnen, wenn plötzlich von Geld die Rede ist!"
+	],
+	"paranoid": [
+		"Ihr Team geht auf Nummer sicher. Niemand kommt hier durch!",
+		"Denken Sie aber daran, dass ein paar Kontrollfragen am Anfang noch kein Sicherheitsrisiko sind."
+	],
+	"reported": [
+		"Großartiges Teamwork!",
+		"Sie haben die Ruhe bewahrt, Beweise im Chat provoziert und dann genau den richtigen Schritt gewählt."
+	]
 }
