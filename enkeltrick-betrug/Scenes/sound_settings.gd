@@ -1,16 +1,14 @@
 extends PanelContainer
 
+#Variables needed for the UI Scaling
 @onready var title = $MarginContainer/VBoxContainer/HBoxContainer/Sound
-
+@onready var offset = $MarginContainer/VBoxContainer/HBoxContainer/Control
+@onready var icon = $MarginContainer/VBoxContainer/HBoxContainer/Leave
 @onready var text_field = [
 	$MarginContainer/VBoxContainer/VBoxContainer/Master,
 	$MarginContainer/VBoxContainer/VBoxContainer2/Music,
 	$MarginContainer/VBoxContainer/VBoxContainer3/Sound_Effect
 ]
-
-@onready var offset = $MarginContainer/VBoxContainer/HBoxContainer/Control
-
-@onready var icon = $MarginContainer/VBoxContainer/HBoxContainer/Leave
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +22,7 @@ func _process(delta: float) -> void:
 	pass
 
 
+#Scaled die UI Passend zur Größe des Bildschirmes (in dem Fall nur Text und das Icon)
 func _update_ui_scaling() -> void:
 
 	var screen_height: float = get_viewport_rect().size.y
@@ -31,7 +30,6 @@ func _update_ui_scaling() -> void:
 	
 	title.add_theme_font_size_override("font_size", new_font_size*10)
 	for b in text_field:
-		print(b)
 		b.add_theme_font_size_override("font_size", new_font_size*8)
 	
 	#THIS WAIT TIMER IS VERY IMPORTANT IT WAITS TILL EVERY ITEM IS REDRAWN

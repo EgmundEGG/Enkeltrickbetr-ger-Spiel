@@ -3,16 +3,18 @@ extends Node
 @onready var chat = $Chat
 @onready var agent_unten = $AgentUnten
 @onready var agent_oben = $AgentOben
-@onready var lvl_button = $LvLButton
-@onready var main_button = $Main_Button
 @onready var infoText = $Infotext
 
+#sind die Variablen, welche alle für das Scaling verwendet werden
 @onready var unten_box = $ColorRect
 @onready var header = $ColorRect/VBoxContainer/Header
 @onready var footer = $ColorRect/VBoxContainer/Footer
 @onready var grid = $GridContainer
-@onready var selection = $VBoxContainer
-
+@onready var menu = $Menu
+@onready var menu_labels = [
+	$Menu/Button,
+	$Menu/Main_Button
+]
 @onready var labels = [
 	$ColorRect/VBoxContainer/Header/HBoxContainer/Name,
 	$ColorRect/VBoxContainer/Header/HBoxContainer/Status
@@ -35,8 +37,7 @@ func _ready():
 	get_tree().get_root().size_changed.connect(_update_ui_scaling)
 	
 func _on_level_beendet(ergebnis_id: String):
-	lvl_button.hide()
-	main_button.hide()
+	menu.hide()
 	
 	await get_tree().create_timer(8.0).timeout # spiegelt den Delay wieder, bis der Agent quatscht
 	
@@ -59,9 +60,8 @@ func starte_level_mit_tutorial():
 	
 	# Kram ausblenden
 	chat.hide()
-	lvl_button.hide()
 	infoText.hide()
-	main_button.hide()
+	menu.hide()
 	
 	var level_daten = load(GameState.selected_level).new()
 	
@@ -82,19 +82,17 @@ func checke_start():
 		if phase == "intro":
 			chat.show()
 			infoText.show()
-			lvl_button.show()
-			main_button.show()
+			menu.show()
 			chat.lvlLoad(GameState.selected_level)
 			
 		elif phase == "outro":
 			chat.show()
 			infoText.show()
-			lvl_button.show()
-			main_button.show()
+			menu.show()
 
+#Scaled die UI Passend zur Größe des Bildschirmes
 func _update_ui_scaling() -> void:
-	print("SIZE CHANGE")
-	await get_tree().create_timer(0.1).timeout
+	#await get_tree().create_timer(0.1).timeout
 	var screen_height: float = get_viewport().size.y
 	var screen_width: float = get_viewport().size.x
 	var new_font_size: int = int(screen_height * 0.01)
@@ -108,8 +106,11 @@ func _update_ui_scaling() -> void:
 	footer.custom_minimum_size.y = screen_height/6
 	header.custom_minimum_size.y = screen_height/6
 	grid.custom_minimum_size.x = screen_width/2 - screen_width/10
-	selection.custom_minimum_size.x = screen_width/10
+	menu.custom_minimum_size.x = screen_width/10
+	menu.custom_minimum_size.y = screen_height/10
 	for t in labels:
 		t.add_theme_font_size_override("font_size", new_font_size*6)
+	for l in menu_labels:
+		l.add_theme_font_size_override("font_size", new_font_size*4)
 	
 	

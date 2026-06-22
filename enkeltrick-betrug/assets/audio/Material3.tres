@@ -48,6 +48,9 @@ expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3gn7"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vipr"]
+bg_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxt33"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 40
@@ -75,4 +78,5 @@ Label/constants/shadow_outline_size = 1
 Label/fonts/font = ExtResource("1_qd5y0")
 Label/styles/focus = SubResource("StyleBoxFlat_enp2e")
 Label/styles/normal = SubResource("StyleBoxEmpty_w3gn7")
+Panel/styles/panel = SubResource("StyleBoxFlat_0vipr")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_sxt33")
