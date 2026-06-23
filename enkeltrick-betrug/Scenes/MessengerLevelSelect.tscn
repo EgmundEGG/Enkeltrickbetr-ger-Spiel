@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bt0j5cmtp7557" path="res://image/messenger_green.svg" id="3_g80va"]
 [ext_resource type="Texture2D" uid="uid://br13najnpejus" path="res://image/messenger_grey.svg" id="4_2r23g"]
 [ext_resource type="Texture2D" uid="uid://c4m4hcsmb41su" path="res://image/messenger_yellow.svg" id="5_ryg4c"]
-[ext_resource type="Texture2D" uid="uid://tqlhhxplexeg" path="res://image/messenger_red.svg" id="6_ejyks"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uikc4"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -81,26 +80,26 @@ offset_right = 135.0
 offset_bottom = 89.0
 theme_override_colors/font_color = Color(1.0039686, 1.0039686, 1.0039686, 1)
 theme_override_colors/icon_normal_color = Color(0.15294118, 0.2901961, 0.47843137, 1)
-text = "Zurück
+text = "Zum Hauptmenü
 "
 script = ExtResource("2_2r23g")
 SceneName = "MainMenu"
 
 [node name="NextButton" type="Button" parent="LVLAuswahl/Header" unique_id=2065936734]
 custom_minimum_size = Vector2(70, 70)
-layout_direction = 3
 layout_mode = 1
 anchors_preset = -1
 offset_left = 35.0
 offset_top = 13.0
 offset_right = 135.0
 offset_bottom = 89.0
+layout_direction = 3
 theme_override_colors/font_color = Color(1.0039686, 1.0039686, 1.0039686, 1)
 text = "Weitere Level
 "
 icon = ExtResource("2_g80va")
 script = ExtResource("2_2r23g")
-SceneName = "MessengerLevelSelect"
+SceneName = "MessengerLevelSelect2"
 
 [node name="Content" type="MarginContainer" parent="LVLAuswahl" unique_id=619944190]
 layout_mode = 1
@@ -248,12 +247,12 @@ layout_mode = 2
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("5_ryg4c")
+texture = ExtResource("3_g80va")
 
 [node name="Diff2" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=786842513]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("5_ryg4c")
+texture = ExtResource("4_2r23g")
 
 [node name="Diff3" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1016953627]
 custom_minimum_size = Vector2(64, 64)
@@ -303,17 +302,17 @@ layout_mode = 2
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("6_ejyks")
+texture = ExtResource("5_ryg4c")
 
 [node name="Diff2" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1511611866]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("6_ejyks")
+texture = ExtResource("5_ryg4c")
 
 [node name="Diff3" type="TextureRect" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=315199032]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("6_ejyks")
+texture = ExtResource("4_2r23g")
 
 [node name="LevelName" type="Label" parent="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button/VBoxContainer" unique_id=1246417366]
 custom_minimum_size = Vector2(0, 80)

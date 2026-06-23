@@ -1,0 +1,273 @@
+[gd_scene format=3 uid="uid://km6neaeaglhx"]
+
+[ext_resource type="Script" uid="uid://desxgq6cdix08" path="res://Scenes/messenger_level_select_2.gd" id="1_57rin"]
+[ext_resource type="Script" uid="uid://6leggv6jfhv5" path="res://MainMenu/Scripts/MenuButton.gd" id="2_4puss"]
+[ext_resource type="Texture2D" uid="uid://com16d60xr6ye" path="res://image/arrow_white.svg" id="3_jmhbl"]
+[ext_resource type="Texture2D" uid="uid://c4m4hcsmb41su" path="res://image/messenger_yellow.svg" id="4_l06k2"]
+[ext_resource type="Texture2D" uid="uid://br13najnpejus" path="res://image/messenger_grey.svg" id="5_djdgh"]
+[ext_resource type="Texture2D" uid="uid://tqlhhxplexeg" path="res://image/messenger_red.svg" id="6_nbih8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1smqb"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpugm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1oop"]
+bg_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8gmf1"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cstkc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjy1f"]
+bg_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
+
+[node name="MessengerLevelSelect2" type="Control" unique_id=916826872]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_57rin")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2040916465]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="ColorRect" parent="." unique_id=179353828]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 102.0
+grow_horizontal = 2
+color = Color(0.2509804, 0.49019608, 0.87058824, 1)
+
+[node name="Title" type="Label" parent="Header" unique_id=1955549926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Levelauswahl"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="Header" unique_id=868220739]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_top = 13.0
+offset_right = 135.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(1.0039686, 1.0039686, 1.0039686, 1)
+theme_override_colors/icon_normal_color = Color(0.15294118, 0.2901961, 0.47843137, 1)
+text = "Zum Hauptmenü
+"
+script = ExtResource("2_4puss")
+SceneName = "MainMenu"
+
+[node name="NextButton" type="Button" parent="Header" unique_id=36838177]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_top = 13.0
+offset_right = 135.0
+offset_bottom = 89.0
+layout_direction = 3
+theme_override_colors/font_color = Color(1.0039686, 1.0039686, 1.0039686, 1)
+text = "Tutorial und erste Level
+"
+icon = ExtResource("3_jmhbl")
+script = ExtResource("2_4puss")
+SceneName = "MessengerLevelSelect"
+
+[node name="Content" type="MarginContainer" parent="." unique_id=294095220]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 136.0
+offset_right = -35.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content" unique_id=661069075]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Level4Button" type="Button" parent="Content/VBoxContainer" unique_id=1919742936]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_1smqb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vpugm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f1oop")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/VBoxContainer/Level4Button" unique_id=301990461]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpacerTop" type="Control" parent="Content/VBoxContainer/Level4Button/VBoxContainer" unique_id=2088000228]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Content/VBoxContainer/Level4Button/VBoxContainer" unique_id=238314509]
+layout_mode = 2
+
+[node name="DifficultyIcons" type="HBoxContainer" parent="Content/VBoxContainer/Level4Button/VBoxContainer/CenterContainer" unique_id=1748900716]
+layout_mode = 2
+
+[node name="Diff1" type="TextureRect" parent="Content/VBoxContainer/Level4Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=2003401470]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_l06k2")
+
+[node name="Diff2" type="TextureRect" parent="Content/VBoxContainer/Level4Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=955692666]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("4_l06k2")
+
+[node name="Diff3" type="TextureRect" parent="Content/VBoxContainer/Level4Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=594077143]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_djdgh")
+
+[node name="LevelName" type="Label" parent="Content/VBoxContainer/Level4Button/VBoxContainer" unique_id=1887857904]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Level 4"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Content/VBoxContainer" unique_id=1326659062]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 2
+
+[node name="Level5Button" type="Button" parent="Content/VBoxContainer/GridContainer" unique_id=1411058901]
+custom_minimum_size = Vector2(530, 225)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_8gmf1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cstkc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hjy1f")
+text = "
+
+"
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/VBoxContainer/GridContainer/Level5Button" unique_id=1294703087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpacerTop" type="Control" parent="Content/VBoxContainer/GridContainer/Level5Button/VBoxContainer" unique_id=1196676726]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Content/VBoxContainer/GridContainer/Level5Button/VBoxContainer" unique_id=1020764697]
+layout_mode = 2
+
+[node name="DifficultyIcons" type="HBoxContainer" parent="Content/VBoxContainer/GridContainer/Level5Button/VBoxContainer/CenterContainer" unique_id=225510458]
+layout_mode = 2
+
+[node name="Diff1" type="TextureRect" parent="Content/VBoxContainer/GridContainer/Level5Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=349248960]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_nbih8")
+
+[node name="Diff2" type="TextureRect" parent="Content/VBoxContainer/GridContainer/Level5Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=792045231]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("6_nbih8")
+
+[node name="Diff3" type="TextureRect" parent="Content/VBoxContainer/GridContainer/Level5Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=657606805]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("6_nbih8")
+
+[node name="LevelName" type="Label" parent="Content/VBoxContainer/GridContainer/Level5Button/VBoxContainer" unique_id=80751844]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Level 5"
+horizontal_alignment = 1
+
+[node name="Level6Button" type="Button" parent="Content/VBoxContainer/GridContainer" unique_id=911099674]
+custom_minimum_size = Vector2(530, 225)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_8gmf1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cstkc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hjy1f")
+text = "
+
+"
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/VBoxContainer/GridContainer/Level6Button" unique_id=213486010]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpacerTop" type="Control" parent="Content/VBoxContainer/GridContainer/Level6Button/VBoxContainer" unique_id=454669637]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Content/VBoxContainer/GridContainer/Level6Button/VBoxContainer" unique_id=1409098639]
+layout_mode = 2
+
+[node name="DifficultyIcons" type="HBoxContainer" parent="Content/VBoxContainer/GridContainer/Level6Button/VBoxContainer/CenterContainer" unique_id=406205790]
+layout_mode = 2
+
+[node name="Diff1" type="TextureRect" parent="Content/VBoxContainer/GridContainer/Level6Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=2068087914]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_nbih8")
+
+[node name="Diff2" type="TextureRect" parent="Content/VBoxContainer/GridContainer/Level6Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1414591336]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("6_nbih8")
+
+[node name="Diff3" type="TextureRect" parent="Content/VBoxContainer/GridContainer/Level6Button/VBoxContainer/CenterContainer/DifficultyIcons" unique_id=1191279557]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("6_nbih8")
+
+[node name="LevelName" type="Label" parent="Content/VBoxContainer/GridContainer/Level6Button/VBoxContainer" unique_id=2019207290]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Level 6"
+horizontal_alignment = 1

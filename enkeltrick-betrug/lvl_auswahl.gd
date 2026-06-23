@@ -7,6 +7,7 @@ extends Control
 
 
 
+
 func _ready() -> void:
 	tutorial.pressed.connect(func(): _start_level("res://lvl/lvl_tutorial.gd"))
 	lvl1.pressed.connect(func(): _start_level("res://lvl/lvl_0.gd"))
