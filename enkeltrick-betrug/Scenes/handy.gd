@@ -29,6 +29,11 @@ extends Node
 	$GridContainer/PostIt4/Title,
 	$GridContainer/PostIt4/Content
 ]
+@onready var buttons = [
+	$ColorRect/VBoxContainer/Footer/Buttonbox/Button,
+	$ColorRect/VBoxContainer/Footer/Buttonbox/Button2,
+	$ColorRect/VBoxContainer/Footer/Buttonbox/Button3
+]
 
 var bereit_unten = false
 var bereit_oben = false
@@ -41,10 +46,10 @@ func _ready():
 	agent_unten.tutorial_finished.connect(_on_agent_unten_fertig)
 	agent_oben.tutorial_finished.connect(_on_agent_oben_fertig)
 	
-	chat2.level_beendet.connect(_on_level_beendet)
+	chat.level_beendet.connect(_on_level_beendet)
 	starte_level_mit_tutorial()
-	_update_ui_scaling()
-	get_tree().get_root().size_changed.connect(_update_ui_scaling)
+	#_update_ui_scaling()
+	#get_tree().get_root().size_changed.connect(_update_ui_scaling)
 	
 func _on_level_beendet(ergebnis_id: String):
 	menu.hide()
@@ -92,43 +97,49 @@ func checke_start():
 	if bereit_unten and bereit_oben:
 		
 		if phase == "intro":
-			chat2.show()
+			chat.show()
 			#infoText.show()
 			grid.show()
 			menu.show()
-			chat2.lvlLoad(GameState.selected_level)
+			chat.lvlLoad(GameState.selected_level)
 			
 		elif phase == "outro":
-			chat2.show()
+			chat.show()
 			#infoText.show()
 			grid.show()
 			menu.show()
 
-#Scaled die UI Passend zur Größe des Bildschirmes
-func _update_ui_scaling() -> void:
+
+##Scaled die UI Passend zur Größe des Bildschirmes
+#func _update_ui_scaling() -> void:
+	##await get_tree().create_timer(0.1).timeout
+	#var screen_height: float = get_viewport().size.y
+	#var screen_width: float = get_viewport().size.x
+	#var new_font_size: int = int(screen_height * 0.01)
+	#
+	#
+	##THIS WAIT TIMER IS VERY IMPORTANT IT WAITS TILL EVERY ITEM IS REDRAWN
+	##and yes it doesnt check for a redraw it just waits
 	#await get_tree().create_timer(0.1).timeout
-	var screen_height: float = get_viewport().size.y
-	var screen_width: float = get_viewport().size.x
-	var new_font_size: int = int(screen_height * 0.01)
-	
-	
-	#THIS WAIT TIMER IS VERY IMPORTANT IT WAITS TILL EVERY ITEM IS REDRAWN
-	#and yes it doesnt check for a redraw it just waits
-	await get_tree().create_timer(0.1).timeout
-	
-	grid.position.y = screen_height
-	grid.position.x = screen_width - screen_width/7
-	grid.size.x = screen_width/3
-	chat2.custom_minimum_size.x = screen_width/2
-	footer.custom_minimum_size.y = screen_height/6
-	header.custom_minimum_size.y = screen_height/6
-	menu.custom_minimum_size.x = screen_width/10
-	menu.custom_minimum_size.y = screen_height/10
-	for t in labels:
-		t.add_theme_font_size_override("font_size", new_font_size*6)
-	for l in menu_labels:
-		l.add_theme_font_size_override("font_size", new_font_size*4)
-	for l in postit_labels:
-		l.add_theme_font_size_override("font_size", new_font_size*3)
-	
+	#
+	#grid.position.y = screen_height
+	#grid.position.x = screen_width - screen_width/7
+	#agent_oben.size.y = screen_height/2
+	#agent_unten.size.y = screen_height/2
+	#agent_oben.size.x = screen_width
+	#agent_unten.size.x = screen_width
+	#grid.size.x = screen_width/3
+	#footer.custom_minimum_size.y = screen_height/6
+	#header.custom_minimum_size.y = screen_height/6
+	#menu.custom_minimum_size.x = screen_width/10
+	#menu.custom_minimum_size.y = screen_height/10
+	#for t in labels:
+		#t.add_theme_font_size_override("font_size", new_font_size*6)
+	#for l in menu_labels:
+		#l.add_theme_font_size_override("font_size", new_font_size*4)
+	#for l in postit_labels:
+		#l.add_theme_font_size_override("font_size", new_font_size*3)
+	#for b in buttons:
+		#b.add_theme_font_size_override("font_size", new_font_size*3)
+
 	

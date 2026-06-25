@@ -12,6 +12,24 @@ var skip_status = 0
 
 func _ready():
 	skip_button.pressed.connect(_on_skip_button_pressed)
+	_update_ui_scaling()
+	get_tree().get_root().size_changed.connect(_update_ui_scaling)
+
+func _update_ui_scaling() -> void:
+	#await get_tree().create_timer(0.1).timeout
+	var screen_height: float = get_viewport().size.y
+	var screen_width: float = get_viewport().size.x
+	var new_font_size: int = int(screen_height * 0.01)
+	
+	
+	
+	
+	#THIS WAIT TIMER IS VERY IMPORTANT IT WAITS TILL EVERY ITEM IS REDRAWN
+	#and yes it doesnt check for a redraw it just waits
+	await get_tree().create_timer(0.1).timeout
+	
+	size.y = screen_height/2
+	size.x = screen_width
 
 func start_dialogue(texte: Array):
 	dialog_texte = texte
