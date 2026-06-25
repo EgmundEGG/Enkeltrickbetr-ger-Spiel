@@ -60,11 +60,11 @@ func _on_level_beendet(ergebnis_id: String):
 	bereit_unten = false
 	bereit_oben = false
 	
-	chat2.hide()
+	chat.hide()
 	#infoText.hide()
 	grid.hide()
 	
-	var level_daten = chat2.current_level
+	var level_daten = chat.current_level
 	
 	agent_unten.start_dialogue(level_daten.auswertung_unten[ergebnis_id])
 	agent_oben.start_dialogue(level_daten.auswertung_oben[ergebnis_id])
@@ -75,7 +75,7 @@ func starte_level_mit_tutorial():
 	phase = "intro"
 	
 	# Kram ausblenden
-	chat2.hide()
+	chat.hide()
 	#infoText.hide()
 	grid.hide()
 	menu.hide()
