@@ -7,15 +7,22 @@ var names = "SOHN"
 var status = true 
 
 # header 
-@onready var labelAvatar = $Background/VBoxContainer/Header/HBoxContainer/Avatar
-@onready var labelName = $Background/VBoxContainer/Header/HBoxContainer/Name
-@onready var labelStatus = $Background/VBoxContainer/Header/HBoxContainer/Status
+#@onready var labelAvatar = $Background/VBoxContainer/Header/HBoxContainer/Avatar
+#@onready var labelName = $Background/VBoxContainer/Header/HBoxContainer/Name
+#@onready var labelStatus = $Background/VBoxContainer/Header/HBoxContainer/Status
+@onready var labelAvatar = $VBoxContainer/Header/HBoxContainer/Avatar
+@onready var labelName = $VBoxContainer/Header/HBoxContainer/Name
+@onready var labelStatus = $VBoxContainer/Header/HBoxContainer/Status
 #ScrollBox
-@onready var messagecontainer = $Background/VBoxContainer/ScrollContainer/MessageContainer
+#@onready var messagecontainer = $Background/VBoxContainer/ScrollContainer/MessageContainer
+@onready var messagecontainer = $VBoxContainer/ScrollContainer/MessageContainer
 #footer
-@onready var button1 = $Background/VBoxContainer/Footer/Buttonbox/Button
-@onready var button2 = $Background/VBoxContainer/Footer/Buttonbox/Button2
-@onready var button3 = $Background/VBoxContainer/Footer/Buttonbox/Button3
+#@onready var button1 = $Background/VBoxContainer/Footer/Buttonbox/Button
+#@onready var button2 = $Background/VBoxContainer/Footer/Buttonbox/Button2
+#@onready var button3 = $Background/VBoxContainer/Footer/Buttonbox/Button3
+@onready var button1 = $VBoxContainer/Footer/Buttonbox/Button
+@onready var button2 = $VBoxContainer/Footer/Buttonbox/Button2
+@onready var button3 = $VBoxContainer/Footer/Buttonbox/Button3
 
 #dialog
 var current = "start"
@@ -38,7 +45,7 @@ func _process(delta: float) -> void:
 	pass
 
 func setData(avatar,names,status) -> void:
-	labelAvatar.text = avatar
+	#labelAvatar.text = avatar
 	labelName.text = names
 	if(status==true):
 		labelStatus.text = "Online"

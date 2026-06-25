@@ -43,6 +43,7 @@ scale = Vector2(1.2328879, 0.8864569)
 texture = ExtResource("2_lf3ts")
 
 [node name="Infotext" type="Control" parent="." unique_id=325893066]
+visible = false
 layout_mode = 1
 anchor_right = 1.0040001
 anchor_bottom = 1.0
@@ -213,13 +214,13 @@ clip_text = true
 text_overrun_behavior = 1
 
 [node name="Chat" type="Control" parent="." unique_id=1049416561]
+visible = false
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 scale = Vector2(0.6, 0.6)
-script = ExtResource("1_adtv2")
 
 [node name="Background" type="ColorRect" parent="Chat" unique_id=509775755]
 layout_mode = 1
@@ -346,13 +347,13 @@ offset_top = -651.0
 offset_bottom = -1.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2031241136]
-visible = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+script = ExtResource("1_adtv2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1492703127]
 layout_mode = 1
@@ -446,6 +447,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
+alignment = 1
 
 [node name="Main_Button" type="Button" parent="Menu" unique_id=1155998799]
 custom_minimum_size = Vector2(0, 50)
@@ -464,18 +466,23 @@ script = ExtResource("5_kjkul")
 SceneName = "MessengerLevelSelect"
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1398345574]
-layout_mode = 0
+visible = false
+layout_mode = 1
+anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -510.0
-offset_right = -100.0
+offset_left = -1052.0
+offset_right = -642.0
 grow_horizontal = 0
 grow_vertical = 2
+rotation = 3.1415927
 columns = 2
 
 [node name="PostIt1" type="TextureRect" parent="GridContainer" unique_id=606436596]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
@@ -509,6 +516,8 @@ text_overrun_behavior = 1
 
 [node name="PostIt2" type="TextureRect" parent="GridContainer" unique_id=1052168077]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
@@ -542,6 +551,8 @@ text_overrun_behavior = 1
 
 [node name="PostIt3" type="TextureRect" parent="GridContainer" unique_id=1956235928]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
@@ -575,6 +586,8 @@ text_overrun_behavior = 1
 
 [node name="PostIt4" type="TextureRect" parent="GridContainer" unique_id=368591530]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("3_r48s6")
 expand_mode = 1
 
