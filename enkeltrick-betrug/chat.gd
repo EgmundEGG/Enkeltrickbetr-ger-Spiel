@@ -69,7 +69,8 @@ func addBubble(text, is_user:bool) -> void:
 	label.text = text
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD #zeilenumbruch
 	label.add_theme_color_override("font_color", Color(0.0, 0.0, 0.0, 1.0))
-	label.custom_minimum_size = Vector2(150, 0)  #  Mindestbreite
+	label.add_theme_font_size_override("font_size", 30)
+	label.custom_minimum_size = Vector2(450, 0)  #  Mindestbreite
 	
 	#ecken abrunden
 	stylebox.corner_radius_bottom_left = 10
