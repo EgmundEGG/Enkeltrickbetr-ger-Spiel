@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bt0j5cmtp7557" path="res://image/messenger_green.svg" id="3_g80va"]
 [ext_resource type="Texture2D" uid="uid://br13najnpejus" path="res://image/messenger_grey.svg" id="4_2r23g"]
 [ext_resource type="Texture2D" uid="uid://c4m4hcsmb41su" path="res://image/messenger_yellow.svg" id="5_ryg4c"]
+[ext_resource type="AudioStream" uid="uid://b8jliy2sp12bw" path="res://assets/audio/Klickgeräusch_Navigation.mp3" id="8_g80va"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uikc4"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -321,3 +322,13 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "Level 3"
 horizontal_alignment = 1
+
+[node name="Navigationsknöpfe" type="AudioStreamPlayer" parent="." unique_id=636822046]
+stream = ExtResource("8_g80va")
+
+[connection signal="pressed" from="LVLAuswahl/Header/BackButton" to="Navigationsknöpfe" method="play"]
+[connection signal="pressed" from="LVLAuswahl/Header/NextButton" to="Navigationsknöpfe" method="play"]
+[connection signal="pressed" from="LVLAuswahl/Content/VBoxContainer/TutorialButton" to="Navigationsknöpfe" method="play"]
+[connection signal="pressed" from="LVLAuswahl/Content/VBoxContainer/GridContainer/Level1Button" to="Navigationsknöpfe" method="play"]
+[connection signal="pressed" from="LVLAuswahl/Content/VBoxContainer/GridContainer/Level2Button" to="Navigationsknöpfe" method="play"]
+[connection signal="pressed" from="LVLAuswahl/Content/VBoxContainer/GridContainer/Level3Button" to="Navigationsknöpfe" method="play"]

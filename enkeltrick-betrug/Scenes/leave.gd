@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$"/root/ClickSound".play()
 
 func _gui_input(event):
 	# Check if the event is a mouse button click

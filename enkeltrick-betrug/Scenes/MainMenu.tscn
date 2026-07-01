@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cdks6d51wqouh" path="res://MainMenu/Design/messages.png" id="2_8saeu"]
 [ext_resource type="Texture2D" uid="uid://cji01boiwdh2k" path="res://MainMenu/Design/WIPicon.png" id="2_853f1"]
 [ext_resource type="Texture2D" uid="uid://bdhd1c5wsb53o" path="res://MainMenu/Design/settings.png" id="4_ghw46"]
+[ext_resource type="AudioStream" uid="uid://b8jliy2sp12bw" path="res://assets/audio/Klickgeräusch_Navigation.mp3" id="5_df05h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -291,3 +292,10 @@ grow_vertical = 2
 texture = ExtResource("4_ghw46")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Navigationsknöpfe" type="AudioStreamPlayer" parent="." unique_id=927623434]
+stream = ExtResource("5_df05h")
+
+[connection signal="pressed" from="Topbar/Credits" to="Navigationsknöpfe" method="play"]
+[connection signal="pressed" from="TopLeft" to="Navigationsknöpfe" method="play"]
+[connection signal="pressed" from="BottomRight" to="Navigationsknöpfe" method="play"]

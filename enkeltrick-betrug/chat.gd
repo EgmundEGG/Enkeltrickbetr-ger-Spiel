@@ -55,6 +55,7 @@ func setData(avatar,names,status) -> void:
 
 
 func addBubble(text, is_user:bool) -> void:
+	$"../Nachicht".play()
 	var align_box = HBoxContainer.new()
 	align_box.size_flags_horizontal = Control.SIZE_FILL
 	
@@ -155,6 +156,7 @@ func _on_button3_pressed() -> void:
 	showStep(next)
 	
 func lvlLoad(path:String) -> void:
+	$"../Spiel start".play()
 	current_level = load(path).new()
 	dialog = current_level.dialog
 	

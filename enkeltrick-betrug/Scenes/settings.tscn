@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bst1u80twjaqr" path="res://Scenes/sound_settings.gd" id="2_j2dne"]
 [ext_resource type="Script" uid="uid://c070ik216n6ty" path="res://Scenes/leave.gd" id="3_j2dne"]
 [ext_resource type="Script" uid="uid://blcrho40677o" path="res://Scenes/volume_slider_master.gd" id="4_0crpi"]
+[ext_resource type="AudioStream" uid="uid://b8jliy2sp12bw" path="res://assets/audio/Klickgeräusch_Navigation.mp3" id="6_6kysc"]
 
 [node name="PanelContainer" type="PanelContainer" unique_id=766532736]
 anchors_preset = 15
@@ -98,3 +99,6 @@ max_value = 1.0
 step = 0.001
 script = ExtResource("4_0crpi")
 bus_name = "Sound Effect"
+
+[node name="Navigationsknöpfe" type="AudioStreamPlayer" parent="." unique_id=822554921]
+stream = ExtResource("6_6kysc")
