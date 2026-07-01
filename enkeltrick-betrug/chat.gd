@@ -9,12 +9,13 @@ var status = true
 # header 
 @onready var labelAvatar = $Background/VBoxContainer/Header/HBoxContainer/Avatar
 @onready var labelName = $Background/VBoxContainer/Header/HBoxContainer/Name
-@onready var labelStatus = $Background/VBoxContainer/Header/HBoxContainer/Status
+@onready var labelStatus = $Background/VBoxContainer/Header/HBoxContainer/HBoxContainer/Status
 #@onready var labelAvatar = $VBoxContainer/Header/HBoxContainer/Avatar
 #@onready var labelName = $VBoxContainer/Header/HBoxContainer/Name
 #@onready var labelStatus = $VBoxContainer/Header/HBoxContainer/Status
 #ScrollBox
 @onready var messagecontainer = $Background/VBoxContainer/ScrollContainer/MessageContainer
+@onready var scrollcontainer = $Background/VBoxContainer/ScrollContainer
 #@onready var messagecontainer = $VBoxContainer/ScrollContainer/MessageContainer
 #footer
 @onready var button1 = $Background/VBoxContainer/Footer/Buttonbox/Button
@@ -104,6 +105,9 @@ func addBubble(text, is_user:bool) -> void:
 	
 	#spawn
 	messagecontainer.add_child(align_box)
+	
+	await get_tree().process_frame
+	scrollcontainer.scroll_vertical = int(scrollcontainer.get_v_scroll_bar().max_value)
 	pass
 
 func showStep(key:String) ->void:
