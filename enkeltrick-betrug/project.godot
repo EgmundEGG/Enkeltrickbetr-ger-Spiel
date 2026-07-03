@@ -21,6 +21,7 @@ ClickSound="*uid://rc7paoxc8fgp"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [physics]
